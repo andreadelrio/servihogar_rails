@@ -1,0 +1,39 @@
+<div class="main-nav">
+  <div class="container">
+    <nav class="navbar">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#busqueda">
+          <span class="fa-bars"></span>
+          <small>MENÚ</small>
+        </button>
+        <div class=" p-7 bg-primary mb--7 mt--7">
+          <%= link_to "SERVIHOGAR", root_url, class: "uppercase medium p-0 m-0 h2 text-muted" %>
+        </div>
+      </div>
+      <div class="collapse navbar-collapse" id="busqueda">
+        <ul class="nav navbar-right hidden-sm">
+          <% if current_provider %>
+            <li class="dropdown mt-7 hidden-sm hidden-xs hidden-md">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Hola, <%= current_provider.name %> <i class="fa-caret-down"></i></a>
+            </li>
+          <% else %>
+            <%= form_tag providers_sessions_path, :class => "form-inline mb-0 user-login-header-form" do %>
+               <div class="form-group mr-7">
+               <%= email_field_tag :email, params[:email], :autofocus => true, :class => "form-control input-sm", :placeholder => "email" %>
+              </div>
+              <div class="form-group mr-7">
+                <%= password_field_tag :password, nil, class: "form-control input-sm", :placeholder => "contraseña" %>
+              </div>
+              <div class="form-group text-center">
+                <%= submit_tag "Ingresa", id: "user_login_button", class: "btn btn-info-grad btn-sm" %>
+                <%= link_to "Crear cuenta gratis", new_provider_path, class: "help-block small m-0" %>
+              </div>
+            <% end %>
+          <% end %>
+          </li>
+        </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>

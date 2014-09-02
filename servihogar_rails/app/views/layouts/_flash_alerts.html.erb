@@ -1,0 +1,17 @@
+<% flash.each do |key, value| %>
+  <div class="container">
+      
+    <div class="alert <%= alert_type(key) %> mt-21">
+      <span><a href="#" class="fa-times close-icon not-underline" close-alert></a></span>
+      <div class="clearfix">
+        <div class="col-md-1 icon-type-box">
+          <i class="icon-type"></i>
+        </div>
+        <div class="col-md-11 text-box">
+          <p class="book inline-block"><%= value %></p>
+        </div>
+      </div>
+    </div>
+      
+  </div>
+<% end %>

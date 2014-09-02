@@ -1,0 +1,52 @@
+<%= form_for(@provider) do |f| %>
+  <% if @provider.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@provider.errors.count, "error") %> prohibited this provider from being saved:</h2>
+
+      <ul>
+      <% @provider.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name_1 %><br>
+    <%= f.text_field :last_name_1 %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name_2 %><br>
+    <%= f.text_field :last_name_2 %>
+  </div>
+  <div class="field">
+    <%= f.label :dni %><br>
+    <%= f.text_field :dni %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :category_id %><br>
+    <%= f.text_field :category_id %>
+  </div>
+
+  <div class="form-group row">
+    <div class="col-md-6">
+      <%= f.label :password, "Contraseña:" %><br />
+      <%= f.password_field :password, class: "form-control"%>
+    </div>
+    <div class="col-md-6">
+      <%= f.label :password_confirmation, "Confirmación de contraseña:" %><br />
+      <%= f.password_field :password_confirmation, class: "form-control"%>
+    </div>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
