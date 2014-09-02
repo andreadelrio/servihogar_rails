@@ -2,8 +2,5 @@
 //= require_tree ./directives
 //= require_tree ./jquery
 
-var servihogar = angular.module('servihogar', [
-  'ngRoute',
-  'ngResource'
-]);
+var servihogar = angular.module('servihogar', []);
 

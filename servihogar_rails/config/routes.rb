@@ -5,6 +5,9 @@ ServihogarRails::Application.routes.draw do
 
   resources :providers_sessions, only: [:new, :create, :destroy]
 
+  match '/salir', 
+      to: 'providers_sessions#destroy', as: 'salir', via: :delete
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

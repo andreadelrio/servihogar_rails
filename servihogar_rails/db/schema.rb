@@ -11,7 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140902152803) do
+ActiveRecord::Schema.define(version: 20140902231431) do
+
+  create_table "categories", force: true do |t|
+    t.string "name"
+  end
+
+  create_table "localizations", force: true do |t|
+    t.integer "provider_id"
+    t.integer "location_id"
+  end
+
+  add_index "localizations", ["location_id"], name: "index_localizations_on_location_id"
+  add_index "localizations", ["provider_id"], name: "index_localizations_on_provider_id"
+
+  create_table "locations", force: true do |t|
+    t.string "name"
+  end
 
   create_table "providers", force: true do |t|
     t.string   "name"
