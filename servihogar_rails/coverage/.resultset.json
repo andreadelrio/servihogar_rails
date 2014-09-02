@@ -1,14 +1,14 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/andreadelrio/ayu/servihogar_rails/config/environment.rb": [
+      "/Users/andreadelrio/otheprojects/servihogar_rails/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/Users/andreadelrio/ayu/servihogar_rails/config/application.rb": [
+      "/Users/andreadelrio/otheprojects/servihogar_rails/config/application.rb": [
         1,
         null,
         1,
@@ -33,13 +33,13 @@
         null,
         null
       ],
-      "/Users/andreadelrio/ayu/servihogar_rails/config/boot.rb": [
+      "/Users/andreadelrio/otheprojects/servihogar_rails/config/boot.rb": [
         null,
         1,
         null,
         1
       ],
-      "/Users/andreadelrio/ayu/servihogar_rails/config/environments/test.rb": [
+      "/Users/andreadelrio/otheprojects/servihogar_rails/config/environments/test.rb": [
         1,
         null,
         null,
@@ -77,7 +77,7 @@
         1,
         null
       ],
-      "/Users/andreadelrio/ayu/servihogar_rails/config/initializers/backtrace_silencers.rb": [
+      "/Users/andreadelrio/otheprojects/servihogar_rails/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -86,13 +86,13 @@
         null,
         null
       ],
-      "/Users/andreadelrio/ayu/servihogar_rails/config/initializers/filter_parameter_logging.rb": [
+      "/Users/andreadelrio/otheprojects/servihogar_rails/config/initializers/filter_parameter_logging.rb": [
         null,
         null,
         null,
         1
       ],
-      "/Users/andreadelrio/ayu/servihogar_rails/config/initializers/inflections.rb": [
+      "/Users/andreadelrio/otheprojects/servihogar_rails/config/initializers/inflections.rb": [
         null,
         null,
         null,
@@ -110,14 +110,14 @@
         null,
         null
       ],
-      "/Users/andreadelrio/ayu/servihogar_rails/config/initializers/mime_types.rb": [
+      "/Users/andreadelrio/otheprojects/servihogar_rails/config/initializers/mime_types.rb": [
         null,
         null,
         null,
         null,
         null
       ],
-      "/Users/andreadelrio/ayu/servihogar_rails/config/initializers/secret_token.rb": [
+      "/Users/andreadelrio/otheprojects/servihogar_rails/config/initializers/secret_token.rb": [
         null,
         null,
         null,
@@ -131,12 +131,12 @@
         null,
         1
       ],
-      "/Users/andreadelrio/ayu/servihogar_rails/config/initializers/session_store.rb": [
+      "/Users/andreadelrio/otheprojects/servihogar_rails/config/initializers/session_store.rb": [
         null,
         null,
         1
       ],
-      "/Users/andreadelrio/ayu/servihogar_rails/config/initializers/wrap_parameters.rb": [
+      "/Users/andreadelrio/otheprojects/servihogar_rails/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -152,7 +152,7 @@
         null,
         null
       ],
-      "/Users/andreadelrio/ayu/servihogar_rails/spec/factories/providers.rb": [
+      "/Users/andreadelrio/otheprojects/servihogar_rails/spec/factories/providers.rb": [
         1,
         1,
         9,
@@ -166,8 +166,10 @@
         null,
         null
       ],
-      "/Users/andreadelrio/ayu/servihogar_rails/config/routes.rb": [
+      "/Users/andreadelrio/otheprojects/servihogar_rails/config/routes.rb": [
         1,
+        1,
+        null,
         1,
         null,
         1,
@@ -228,7 +230,7 @@
         null,
         null
       ],
-      "/Users/andreadelrio/ayu/servihogar_rails/app/helpers/application_helper.rb": [
+      "/Users/andreadelrio/otheprojects/servihogar_rails/app/helpers/application_helper.rb": [
         1,
         1,
         0,
@@ -246,26 +248,23 @@
         null,
         null
       ],
-      "/Users/andreadelrio/ayu/servihogar_rails/app/helpers/providers_helper.rb": [
+      "/Users/andreadelrio/otheprojects/servihogar_rails/app/helpers/providers_helper.rb": [
         1,
         null
       ],
-      "/Users/andreadelrio/ayu/servihogar_rails/spec/support/session_test_helper.rb": [
+      "/Users/andreadelrio/otheprojects/servihogar_rails/spec/support/session_test_helper.rb": [
         1,
         null,
         1,
         3,
-        0,
-        null,
-        null,
-        1,
-        0,
         null,
         null
       ],
-      "/Users/andreadelrio/ayu/servihogar_rails/app/controllers/providers_controller.rb": [
+      "/Users/andreadelrio/otheprojects/servihogar_rails/app/controllers/providers_controller.rb": [
         1,
         1,
+        1,
+        null,
         null,
         null,
         null,
@@ -291,19 +290,30 @@
         null,
         1,
         5,
-        null,
         5,
-        5,
-        6,
+        3,
+        3,
         3,
         null,
-        4,
         2,
         null,
         null,
         null,
         null,
         null,
+        1,
+        2,
+        2,
+        4,
+        2,
+        null,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
         null,
         1,
         0,
@@ -311,62 +321,50 @@
         0,
         0,
         null,
-        0,
-        0,
-        null,
-        null,
-        null,
-        null,
         null,
         null,
         1,
-        0,
-        0,
-        0,
-        0,
-        null,
-        null,
-        null,
-        1,
-        null,
-        1,
-        1,
-        null,
-        null,
         null,
         1,
         5,
         null,
-        null
-      ],
-      "/Users/andreadelrio/ayu/servihogar_rails/app/controllers/application_controller.rb": [
-        1,
         null,
         null,
         1,
-        1,
+        7,
         null,
         null
       ],
-      "/Users/andreadelrio/ayu/servihogar_rails/app/controllers/concerns/providers_sessions.rb": [
+      "/Users/andreadelrio/otheprojects/servihogar_rails/app/controllers/application_controller.rb": [
         1,
-        1,
-        0,
-        null,
-        null,
-        1,
-        0,
-        0,
         null,
         null,
         1,
-        0,
-        0,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/andreadelrio/otheprojects/servihogar_rails/app/controllers/concerns/providers_sessions.rb": [
+        1,
+        1,
+        4,
         null,
         null,
         1,
         0,
         0,
+        null,
+        null,
+        1,
+        2,
+        2,
+        null,
+        null,
+        1,
+        2,
+        2,
         null,
         null,
         1,
@@ -374,7 +372,7 @@
         null,
         null
       ],
-      "/Users/andreadelrio/ayu/servihogar_rails/app/models/provider.rb": [
+      "/Users/andreadelrio/otheprojects/servihogar_rails/app/models/provider.rb": [
         1,
         1,
         null,
@@ -383,6 +381,6 @@
         null
       ]
     },
-    "timestamp": 1409675447
+    "timestamp": 1409685924
   }
 }

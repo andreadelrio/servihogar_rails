@@ -63,7 +63,7 @@ describe ProvidersController do
   describe "#edit" do
 
     let(:provider) { create(:provider) }
-    let(:edit_action) { get :edit, locale: "es", id: provider.url }
+    let(:edit_action) { get :edit, id: provider.id }
 
     context "logged in provider" do
 
@@ -78,38 +78,31 @@ describe ProvidersController do
     context "unlogged provider" do
       it "assigns provider" do
         edit_action
-        expect(response).to redirect_to new_providers_session_es_path
+        expect(response).to redirect_to new_providers_session_path
       end
     end
   end
 
   describe "update" do
 
-    let(:update_action) { patch :update,  locale: "es", provider: provider.attributes, id: provider.url }
+    let(:update_action) { patch :update, provider: provider.attributes, id: provider.id }
 
     let(:provider) { create(:provider) }
 
     before(:each) do
       login(provider)
-      provider.phone = "8184504550"
+      provider.dni = "8184504550"
     end
 
     it "should be valid" do
       update_action
       expect(response).to be_true
-      expect(Provider.last.phone).to eq('8184504550')
+      expect(Provider.last.dni).to eq('8184504550')
     end
 
-    it "should redirect to edit path" do
+    it "should redirect to profile page" do
       update_action
-      expect(response).to redirect_to dashboard_provider_es_path(provider)
-    end
-  end
-
-  describe "#whyjoin" do
-    it "should be valid" do
-      post :whyjoin, locale: "es"
-      expect(response).to be_success
+      expect(response).to redirect_to provider_path(provider)
     end
   end
 end

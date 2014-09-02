@@ -5,12 +5,12 @@ module ProvidersSessions
 
   def require_logged_in_provider
     current_provider
-    redirect_to new_providers_session_es_path unless @current_provider
+    redirect_to new_providers_session_path unless @current_provider
   end
 
   def require_current_provider
     current_provider
-    redirect_to new_providers_session_es_path unless current_provider?
+    redirect_to new_providers_session_path unless current_provider?
   end
 
   def current_provider?

@@ -1,5 +1,7 @@
 class ProvidersController < ApplicationController
   before_action :set_provider, only: [:show, :edit, :update, :destroy]
+  before_action :require_current_provider, only: [:edit]
+
 
   # GET /providers
   # GET /providers.json
@@ -25,16 +27,13 @@ class ProvidersController < ApplicationController
   # POST /providers.json
   def create
     @provider = Provider.new(provider_params)
-
-    respond_to do |format|
       if @provider.save
-        format.html { redirect_to @provider, notice: 'Provider was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @provider }
+        session[:provider_id] = @provider.id
+        flash[:success] = "Hola #{@provider.name}, bienvenido a Servihogar."
+        redirect_to root_path
       else
-        format.html { render action: 'new' }
-        format.json { render json: @provider.errors, status: :unprocessable_entity }
+        render action: 'new'
       end
-    end
   end
 
   # PATCH/PUT /providers/1
@@ -42,7 +41,7 @@ class ProvidersController < ApplicationController
   def update
     respond_to do |format|
       if @provider.update(provider_params)
-        format.html { redirect_to @provider, notice: 'Provider was successfully updated.' }
+        format.html { redirect_to @provider, notice: 'Tu perfil se ha actualizado con éxito' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
