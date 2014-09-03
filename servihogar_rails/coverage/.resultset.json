@@ -152,6 +152,13 @@
         null,
         null
       ],
+      "/Users/andreadelrio/otheprojects/servihogar_rails/spec/factories/categories.rb": [
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/andreadelrio/otheprojects/servihogar_rails/spec/factories/localizations.rb": [
         1,
         1,
@@ -170,10 +177,10 @@
       "/Users/andreadelrio/otheprojects/servihogar_rails/spec/factories/providers.rb": [
         1,
         1,
-        1,
-        1,
-        1,
-        1,
+        23,
+        23,
+        23,
+        23,
         1,
         1,
         1,
@@ -188,6 +195,9 @@
         1,
         null,
         1,
+        null,
+        1,
+        null,
         null,
         null,
         null,
@@ -283,9 +293,46 @@
         0,
         null,
         null
+      ],
+      "/Users/andreadelrio/otheprojects/servihogar_rails/app/models/provider.rb": [
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/andreadelrio/otheprojects/servihogar_rails/app/models/localization.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/andreadelrio/otheprojects/servihogar_rails/app/models/location.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        0,
+        null,
+        null
       ]
     },
-    "timestamp": 1409699474
+    "timestamp": 1409786402
   },
   "Cucumber Features": {
     "coverage": {

@@ -11,6 +11,7 @@ class Provider < ActiveRecord::Base
 
   has_many :localizations
   has_many :locations, through: :localizations
+  validates :locations, :presence => true
 
 
 end
