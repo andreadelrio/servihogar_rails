@@ -1,52 +1,70 @@
-<%= form_for(@provider) do |f| %>
-  <% if @provider.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@provider.errors.count, "error") %> prohibited this provider from being saved:</h2>
+<div class="row">
+  <div class="col-md-2"></div>
+  <div class="col-md-8">
+    <div class="panel panel-primary">
+        <div class="panel-heading">Regístrate en Servihogar</div>
+        <div class="panel-body">
+        <%= form_for(@provider) do |f| %>
+        <% if @provider.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@provider.errors.count, "error") %> prohibited this provider from being saved:</h2>
 
-      <ul>
-      <% @provider.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
+            <ul>
+            <% @provider.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+            </ul>
+          </div>
+        <% end %>
+          <div class="form-group row">
+            <div class="col-md-4">
+              <%= f.label :name, "Nombre:" %><br>
+              <%= f.text_field :name, class: "form-control" %>
+            </div>
+            <div class="col-md-4">
+              <%= f.label :last_name_1, "Apellido materno:" %><br>
+              <%= f.text_field :last_name_1, class: "form-control" %>
+            </div>
+            <div class="col-md-4">
+              <%= f.label :last_name_2, "Apellido paterno:" %><br>
+              <%= f.text_field :last_name_2, class: "form-control" %>
+            </div>
+          </div>  
+
+          <div class="form-group row">
+            <div class="col-md-4">
+              <%= f.label :email, "Correo electrónico:" %><br>
+              <%= f.text_field :email, class: "form-control" %>
+            </div>
+            <div class="col-md-2">
+              <%= f.label :dni, "DNI:" %><br>
+              <%= f.text_field :dni, class: "form-control" %>
+            </div>
+            <div class="col-md-6">
+              <label>¿A qué categoría perteneces?</label>
+              <%= f.collection_select(:category_id, Category.all, :id, :name, {}, { :class=> "form-control" }) %>
+            </div>
+        </div>
+
+          <div class="form-group row">
+            <div class="col-md-6">
+              <%= f.label :password, "Contraseña:" %><br />
+              <%= f.password_field :password, class: "form-control"%>
+            </div>
+            <div class="col-md-6">
+              <%= f.label :password_confirmation, "Confirmación de contraseña:" %><br />
+              <%= f.password_field :password_confirmation, class: "form-control"%>
+            </div>
+          </div>
+
+        <div class="col-md-6">
+           <%= f.submit "Regístrate", id: "submit", class: "btn btn-primary form-control" %>
+        </div>
       <% end %>
-      </ul>
-    </div>
-  <% end %>
+        </div> <!-- panel-body -->
+    </div> <!-- panel-default -->
+  </div> <!-- col-md-8 -->
+</div> <!-- row -->
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :last_name_1 %><br>
-    <%= f.text_field :last_name_1 %>
-  </div>
-  <div class="field">
-    <%= f.label :last_name_2 %><br>
-    <%= f.text_field :last_name_2 %>
-  </div>
-  <div class="field">
-    <%= f.label :dni %><br>
-    <%= f.text_field :dni %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :category_id %><br>
-    <%= f.text_field :category_id %>
-  </div>
 
-  <div class="form-group row">
-    <div class="col-md-6">
-      <%= f.label :password, "Contraseña:" %><br />
-      <%= f.password_field :password, class: "form-control"%>
-    </div>
-    <div class="col-md-6">
-      <%= f.label :password_confirmation, "Confirmación de contraseña:" %><br />
-      <%= f.password_field :password_confirmation, class: "form-control"%>
-    </div>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+

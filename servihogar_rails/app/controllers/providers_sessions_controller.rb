@@ -18,6 +18,6 @@ class ProvidersSessionsController < ApplicationController
 
   def destroy
     session[:provider_id] = nil
-    redirect_to new_providers_session_path
+    redirect_to root_path
   end
 end

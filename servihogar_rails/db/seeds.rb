@@ -55,3 +55,13 @@ locations = [
 locations.sort!.each do |location|
   Location.find_or_create_by(name: location)
 end
+
+categories = [
+   "Electricista",
+   "Pintor",
+   "Jardinero",
+   "Gasfitero"]
+
+categories.sort!.each do |category|
+  Category.find_or_create_by(name: category)
+end
