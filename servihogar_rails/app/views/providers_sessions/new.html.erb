@@ -1,29 +1,27 @@
 <%= render "layouts/flash_alerts" %>
-<div class="proveedores-log-in">
-  <div class="container mt-35 mb-35 mh-630">
-    <div class="row">
-      <div class="col-md-4"></div>
-      <div class="col-md-4">
-        <div class="panel panel-default">
-          <div class="panel-heading medium">Ingresa como proveedor</div>
-          <div class="panel-body">
-            <%= form_tag providers_sessions_path do %>
-              <div class="form-group">
-                <%= label_tag :email, "Correo electrónico" %>
-                <%= email_field_tag :email, params[:email], :autofocus => true, class: "form-control"  %>
-              </div>
+<div class="container mt-70 mb-35 mh-630">
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading medium">Ingresa como proveedor</div>
+        <div class="panel-body">
+          <%= form_tag providers_sessions_path do %>
+            <div class="form-group">
+              <%= label_tag :email, "Correo electrónico" %>
+              <%= email_field_tag :email, params[:email], :autofocus => true, class: "form-control"  %>
+            </div>
 
-              <div class="form-group">
-                <%= label_tag :password, "Contraseña" %><br />
-                <%= password_field_tag :password, nil, class: "form-control"  %>
-              </div>
+            <div class="form-group">
+              <%= label_tag :password, "Contraseña" %><br />
+              <%= password_field_tag :password, nil, class: "form-control"  %>
+            </div>
 
-              <%= submit_tag "Ingresa", class: "form-control btn btn-primary" %>
-            <% end %>
-          </div>
+            <%= submit_tag "Ingresa", class: "form-control btn btn-primary" %>
+          <% end %>
         </div>
       </div>
-      <div class="col-md-4"></div>
     </div>
+    <div class="col-md-4"></div>
   </div>
 </div>

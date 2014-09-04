@@ -6,17 +6,7 @@
           <div class="panel-heading">Regístrate en Servihogar</div>
           <div class="panel-body">
           <%= form_for(@provider) do |f| %>
-          <% if @provider.errors.any? %>
-            <div id="error_explanation">
-              <h2><%= pluralize(@provider.errors.count, "error") %> prohibited this provider from being saved:</h2>
-
-              <ul>
-              <% @provider.errors.full_messages.each do |msg| %>
-                <li><%= msg %></li>
-              <% end %>
-              </ul>
-            </div>
-          <% end %>
+            <%= render "providers/error_messages" %>
             <div class="form-group row">
               <div class="col-md-4">
                 <%= f.label :name, "Nombre:" %><br>

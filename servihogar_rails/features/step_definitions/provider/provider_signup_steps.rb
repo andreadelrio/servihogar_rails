@@ -1,15 +1,18 @@
 When /^(?:|I )submit correct provider information$/ do
   category = Category.first.name
+  location = Location.first
   fill_in('provider[email]', with: @provider.email)
   fill_in('provider[name]', with: @provider.name)
   fill_in('provider[dni]', with: @provider.dni)
   fill_in('provider[last_name_1]', with: @provider.last_name_1)
   fill_in('provider[last_name_2]', with: @provider.last_name_2)
   select(category, from: 'provider[category_id]')
+  find("#location_#{location.id}").set(true)
   fill_in('provider[password]', with: @provider.password)
   fill_in('provider[password_confirmation]', with: @provider.password_confirmation)
   click_on("submit")
 end
+
 
 Then /^I should have successfully created a provider account$/ do
   provider = Provider.find_by_email(@provider.email)
@@ -18,13 +21,30 @@ end
 
 When /^I submit mismatched passwords$/ do
   category = Category.first.name
+  location = Location.first
   fill_in('provider[email]', with: @provider.email)
   fill_in('provider[name]', with: @provider.name)
   fill_in('provider[dni]', with: @provider.dni)
   fill_in('provider[last_name_1]', with: @provider.last_name_1)
   fill_in('provider[last_name_2]', with: @provider.last_name_2)
+  select(category, from: 'provider[category_id]')
+  find("#location_#{location.id}").set(true)
   fill_in('provider[password]', with: @provider.password)
   fill_in('provider[password_confirmation]', with: "wrongpassword")
+  click_on("submit")
+end
+
+When /^I don't check any locations$/ do
+  category = Category.first.name
+  location = Location.first
+  fill_in('provider[email]', with: @provider.email)
+  fill_in('provider[name]', with: @provider.name)
+  fill_in('provider[dni]', with: @provider.dni)
+  fill_in('provider[last_name_1]', with: @provider.last_name_1)
+  fill_in('provider[last_name_2]', with: @provider.last_name_2)
+  select(category, from: 'provider[category_id]')
+  fill_in('provider[password]', with: @provider.password)
+  fill_in('provider[password_confirmation]', with: @provider.password_confirmation)
   click_on("submit")
 end
 
@@ -52,6 +72,16 @@ When /^I create a new provider account$/ do
   fill_in('provider[password]', with: "password")
   fill_in('provider[password_confirmation]', with: "password")
   click_on("submit")
+end
+
+Then /^I should see a welcome message and be on the homepage$/ do
+  expect(page).to have_content("bienvenido a Servihogar.")
+  current_path_is(root_path)
+end
+
+Then /^I should see a missing locations error message$/ do
+  expect(page).to have_content("Ubicaciones no puede estar en blanco.")
+#  current_path_is(root_path)
 end
 
 And /^I am logged out$/ do

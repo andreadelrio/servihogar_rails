@@ -32,25 +32,23 @@ end
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.1.2'
 
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano', group: :development
-
-# Use debugger
-# gem 'debugger', group: [:development, :test]
-group :development, :test do
-  gem 'rspec-rails'
+group :development do
   gem 'faker'
   gem 'guard-rspec', require: false
   gem 'guard-cucumber'
-  gem 'guard-livereload', require: false
+  gem 'spring', '~> 1.1.2'
+  gem 'spring-commands-rspec', '~> 1.0.2'
+  gem 'spring-commands-cucumber', '~> 1.0.1'
   gem 'bullet'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'meta_request'
   gem 'rb-fsevent'
+end
+
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'foreman'
 end
 
 group :test do
@@ -61,5 +59,6 @@ group :test do
   gem 'simplecov', :require => false
   gem "zeus", "0.13.3"
   gem 'factory_girl_rails', '4.2.1'
+  gem 'launchy'
   gem 'shoulda-matchers'
 end

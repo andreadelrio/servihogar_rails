@@ -1,5 +1,5 @@
-When /^I am on my provider dashboard page$/ do
-  visit_and_assert(dashboard_provider_es_path(@provider))
+Then /^(?:|I )should be on the homepage$/ do
+  current_path_is("/")
 end
 
 When /^I am on my provider edit page$/ do
@@ -33,6 +33,7 @@ end
 
 And /^I am on the provider new page$/ do
   category = create(:category)
+  location = create(:location)
   visit_and_assert(new_provider_path)
 end
 
@@ -57,7 +58,7 @@ Then /^I should be on the provider new password page$/ do
 end
 
 Then /^I should be on the provider signup page$/ do
-  current_path_is("/proveedores")
+  current_path_is("/providers")
 end
 
 Then /^I should be on the provider login page$/ do

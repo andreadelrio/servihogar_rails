@@ -249,6 +249,7 @@ es:
             last_name_2: "Apellido Materno"
             url: "URL"
             title: "Sufijo"
+            locations: "Ubicaciones"
         location:
             street_address: "Dirección"   
             district: "Distrito"
