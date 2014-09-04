@@ -11,8 +11,8 @@ When /^I am on my provider fotos page$/ do
   visit_and_assert(my_pic_provider_path(@provider))
 end
 
-And /^I am on the provider homepage$/ do
-  visit_and_assert(whyjoin_providers_path)
+And /^I am on the homepage$/ do
+  visit_and_assert(root_path)
 end
 
 And /^I am on my provider event show page$/ do
@@ -42,7 +42,7 @@ Then /^I should be on my provider dashboard page/ do
 end
 
 Then /^I should be on my provider edit page$/ do
-  current_path_is("/proveedores/#{@provider.url}/edit")
+  current_path_is("/providers/#{@provider.id}/edit")
 end
 
 Then /^I should be on my provider fotos page$/ do
@@ -62,7 +62,7 @@ Then /^I should be on the provider signup page$/ do
 end
 
 Then /^I should be on the provider login page$/ do
-  current_path_is("/proveedor/ingresa")
+  current_path_is("/providers_sessions")
 end
 
 Then /^I should be on my provider set locations page$/ do

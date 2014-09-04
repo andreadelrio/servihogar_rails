@@ -8,5 +8,7 @@ FactoryGirl.define do
     password                 "foobarbaz"
     password_confirmation    "foobarbaz"
     category_id           "1"
-  end
+    locations          {|t| [t.association(:location)] }
+  end  
 end
+
