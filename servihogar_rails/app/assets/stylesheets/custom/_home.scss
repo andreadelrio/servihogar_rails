@@ -1,6 +1,7 @@
 #home-filters {
-  background-image: url('../assets/img/casa.jpg');
-  height: 449px;
+  // background: url(http://s3.postimg.org/9z6tol4jn/casa.jpg) no-repeat;
+  background: url(http://38.media.tumblr.com/3d156c8f2eda130780e2b381039d6827/tumblr_nabj1sNYFd1qfirfao1_1280.jpg) no-repeat;
+  height: 460px;
   background-size: cover;
 
   ul {
@@ -22,7 +23,7 @@
           z-index: 30;
           font-size: 21px;
           width: 100%;
-          background: rgba(0,0,0,0.6);
+          background: rgb(239,206,90);
           height: 100%;
           top: 0;
           border-radius: 50%;
@@ -40,7 +41,9 @@
         }
 
         &:hover {
+          .overlay {
           display: block;
+          }
         }
       }
     }

@@ -9,7 +9,7 @@ class ProvidersSessionsController < ApplicationController
     @provider = Provider.find_by_email(params[:email])
     if @provider && @provider.authenticate(params[:password])
       session[:provider_id] = @provider.id
-      redirect_to root_url, :flash => {:success => "Bienvenido"}
+      redirect_to root_url
     else
       flash.now[:error] = "Correo electrónico o contraseña inválidos."
       render 'new'

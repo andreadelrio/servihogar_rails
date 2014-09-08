@@ -1,6 +1,7 @@
 class ProvidersController < ApplicationController
   before_action :set_provider, only: [:show, :edit, :update, :destroy]
   before_action :require_current_provider, only: [:edit]
+  before_action :get_ranges, only: [:edit, :new]
   before_action :require_unlogged_provider, only: [:new]
 
 
@@ -70,5 +71,11 @@ class ProvidersController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def provider_params
       params.require(:provider).permit(:name, :last_name_1, :last_name_2, :dni, :email, :category_id, :password, :password_confirmation, locations_attributes: [:id], location_ids: [])
+    end
+
+    def get_ranges
+      @letters1 = ('A'..'J').to_a
+      @letters2 = ('K'..'R').to_a
+      @letters3 = ('S'..'Z').to_a
     end
 end

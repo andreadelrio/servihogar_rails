@@ -71,43 +71,6 @@
   background: white;
 }
 
-.business-dashboard-nav {
-  background: $gray-darker;
-}
-
-.business-dashboard-body {
-  min-height: 768px;
-  .business-dashboard-gral-info-module {
-    .panel-body {
-      padding: 0;
-      .list-group {
-        margin: 0;
-        .list-group-item {
-          border-left: none;
-          border-right: none;
-        }
-      }
-    }
-  }
-}
-
-.business-dashboard-options {
-  background: white;
-  border-radius: $border-radius-base;
-  border: 3px solid $brand-primary;
-  min-height: 210px;
-}
-
-.business-dashboard-right-module {
-  
-}
-
-.business-profile-form, .business-setup-form {
-  label {
-    @include medium;
-  }
-}
-
 .providers-create-events {
   min-height: 768px;
 }
@@ -184,9 +147,14 @@ ul.search-results {
   }
 }
 
-
-
-
+.checkbox-inline.no_indent,
+.checkbox-inline.no_indent+.checkbox-inline.no_indent {
+  margin-left: 0;
+  margin-right: 10px;
+}
+.checkbox-inline.no_indent:last-child {
+  margin-right: 0;
+}
 
 
 

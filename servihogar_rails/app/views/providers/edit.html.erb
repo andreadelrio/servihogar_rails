@@ -1,46 +1,67 @@
-<%= form_for(@provider) do |f| %>
-  <% if @provider.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@provider.errors.count, "error") %> prohibited this provider from being saved:</h2>
+<div class="container mt-49 content mh-630">
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8 mt-49">
+      <div class="panel panel-primary">
+          <div class="panel-heading">Actualiza tu perfil</div>
+          <div class="panel-body">
+          <%= form_for(@provider) do |f| %>
+            <%= render "providers/error_messages" %>
+            <div class="form-group row">
+              <div class="col-md-4">
+                <%= f.label :name, "Nombre:" %><br>
+                <%= f.text_field :name, class: "form-control" %>
+              </div>
+              <div class="col-md-4">
+                <%= f.label :last_name_1, "Apellido paterno:" %><br>
+                <%= f.text_field :last_name_1, class: "form-control" %>
+              </div>
+              <div class="col-md-4">
+                <%= f.label :last_name_2, "Apellido materno:" %><br>
+                <%= f.text_field :last_name_2, class: "form-control" %>
+              </div>
+            </div>  
 
-      <ul>
-      <% @provider.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+      <div class="field">
+        <%= f.label :dni %><br>
+        <%= f.text_field :dni %>
+      </div>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+      <div class="col-md-6">
+        <label>¿A qué categoría perteneces?</label>
+        <%= f.collection_select(:category_id, Category.all, :id, :name, :style => "width:50%") %>
+      </div> <br>
+
+      <label>¿En qué distritos puedes trabajar?</label> <br>
+
+      <div class="row pt-14 pb-21">
+      <div class="col-md-4">
+        <%= hidden_field_tag "provider[location_ids][]", nil %>
+        <% Location.where("substr(name, 1, 1) IN (?)", @letters1).each do |location| %>
+          <%= check_box_tag "provider[location_ids][]", location.id, @provider.location_ids.include?(location.id), id: dom_id(location) %>
+          <%= label_tag dom_id(location), location.name, class: "small" %> <br>
+        <% end %>
+      </div>
+                  <div class="col-md-4">
+        <%= hidden_field_tag "provider[location_ids][]", nil %>
+        <% Location.where("substr(name, 1, 1) IN (?)", @letters2).each do |location| %>
+          <%= check_box_tag "provider[location_ids][]", location.id, @provider.location_ids.include?(location.id), id: dom_id(location) %>
+          <%= label_tag dom_id(location), location.name, class: "small" %> <br>
+        <% end %>
+      </div>
+                  <div class="col-md-4">
+        <%= hidden_field_tag "provider[location_ids][]", nil %>
+        <% Location.where("substr(name, 1, 1) IN (?)", @letters3).each do |location| %>
+          <%= check_box_tag "provider[location_ids][]", location.id, @provider.location_ids.include?(location.id), id: dom_id(location) %>
+          <%= label_tag dom_id(location), location.name, class: "small" %> <br>
+        <% end %>
+      </div>
+      </div>
+
+      <div class="form-group mt-14">
+        <%= f.submit "Actualizar perfil", id: "submit", class: "btn btn-info-grad" %>
+      </div>
+
+    <% end %>
   </div>
-  <div class="field">
-    <%= f.label :last_name_1 %><br>
-    <%= f.text_field :last_name_1 %>
-  </div>
-  <div class="field">
-    <%= f.label :last_name_2 %><br>
-    <%= f.text_field :last_name_2 %>
-  </div>
-  <div class="field">
-    <%= f.label :dni %><br>
-    <%= f.text_field :dni %>
-  </div>
-
-  <div class="col-md-6">
-    <label>¿A qué categoría perteneces?</label>
-    <%= f.collection_select(:category_id, Category.all, :id, :name, :style => "width:50%") %>
-  </div> <br>
-
-  <%= hidden_field_tag "provider[location_ids][]", nil %>
-  <% Location.all.each do |location| %>
-    <%= check_box_tag "provider[location_ids][]", location.id, @provider.location_ids.include?(location.id), id: dom_id(location) %>
-    <%= label_tag dom_id(location), location.name %><br>
-  <% end %>
-
-  <div class="form-group mt-14">
-    <%= f.submit "Actualizar perfil", id: "submit", class: "btn btn-info-grad" %>
-  </div>
-
-<% end %>
+</div>    
