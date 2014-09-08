@@ -65,14 +65,101 @@
           </a>
         </li>
         <li>
-          <a href="#">
+          <%= link_to(category_path(1)) do %>
             <%= image_tag("power.png", :class => "img-circle" ) %>
             <div class="overlay">
               <span>Electricidad</span>
             </div>
+          <% end %>  
           </a>
         </li>
       </ul>
     </div>
   </div>
 </section>
+<section id="home-pasos" class="clearfix full-width-grid text-center bg-warning">
+    <div class="col-md-4 p-0">
+        <h4 class="text-center pt-21 text-muted">1. Elige</h4>
+        <div class="row">
+          <div class="col-md-1"></div>
+          <div class="col-md-2">
+            <h1></h1>
+            <div class="demo">
+            <div class="hexa text-center" id="hexagon"></div>
+            <div class="hex-over pt-21"><i class="fa-check-square-o h3"></i></div>
+            </div>
+          </div>
+          <div class="col-md-1"></div>
+         </div>
+        <p class="p-63 text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit Numquam similique, tempore suscipit officiis consequatur, magni deserunt quia porro.</p>
+    </div>
+    <div class="col-md-4 p-0">
+        <h4 class="text-center pt-21 text-muted">2. Contrata</h4>
+        <div class="row">
+          <div class="col-md-1"></div>
+          <div class="col-md-2">
+            <h1></h1>
+            <div class="demo">
+            <div class="hexa text-center" id="hexagon"></div>
+            <div class="hex-over pt-28"><%= image_tag("handshake.png") %></div>
+            </div>
+          </div>
+          <div class="col-md-1"></div>
+       </div>
+        <p class="p-63 text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit Numquam similique, tempore suscipit officiis consequatur, magni deserunt quia porro.</p>
+    </div>
+    <div class="col-md-4 p-0">
+        <h4 class="text-center pt-21 text-muted">3. Evalúa</h4>
+        <div class="row">
+          <div class="col-md-1"></div>
+          <div class="col-md-2">
+            <h1></h1>
+            <div class="demo">
+            <div class="hexa text-center" id="hexagon"></div>
+            <div class="hex-over pt-21"><%= image_tag("call.png") %></div>
+            </div>
+          </div>
+          <div class="col-md-1"></div>
+       </div>
+        <p class="p-63 text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit Numquam similique, tempore suscipit officiis consequatur, magni deserunt quia porro.</p>
+    </div> 
+
+  </section>
+  <section id="home-profiles">
+    <div class="container pb-35">
+      <div class="content-wrapper">
+        <div class="row">
+          <div class="col-md-4 text-center">
+            <div class="profile text-center">
+              <%= image_tag("girl.jpg", :class => "img-circle img-responsive" ) %> 
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat.</p>
+              <small>— Rachel, Travelled 01 August 2014</small>
+            </div> 
+          </div>
+          <div class="col-md-4 text-center">
+            <div class="profile text-center"> 
+              <%= image_tag("profile.png", :class => "img-circle img-responsive" ) %> 
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat.</p>
+              <small>— Rachel, Travelled 01 August 2014</small>
+            </div>     
+          </div>
+          <div class="col-md-4 text-center">
+            <div class="profile text-center"> 
+              <%= image_tag("Aviary.png", :class => "img-circle img-responsive" ) %> 
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat.</p>
+              <small>— Rachel, Travelled 01 August 2014</small>
+            </div>    
+          </div>
+        </div>
+      </div> 
+    </div>   
+  </section>
