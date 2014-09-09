@@ -8,13 +8,18 @@ class CategoriesController < ApplicationController
   # GET /providers
   # GET /providers.json
   def index
-    @providers = Provider.all
+
   end
 
   # GET /providers/1
   # GET /providers/1.json
   def show
-    @providers = @category.providers
+  @search = Provider.search(params[:q])
+    unless (params.has_key?(:locations_id_eq) || params.has_key?(:category_id_eq))
+      @providers = @category.providers
+    else
+      @providers = @search.result
+    end 
   end
 
   private

@@ -8,8 +8,12 @@ class ProvidersController < ApplicationController
   # GET /providers
   # GET /providers.json
   def index
-    @providers = Provider.all
+    @search = Provider.search(params[:q])
+    @providers = @search.result
   end
+
+  def home
+  end  
 
   # GET /providers/1
   # GET /providers/1.json

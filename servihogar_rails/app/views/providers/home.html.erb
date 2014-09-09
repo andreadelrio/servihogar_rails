@@ -1,0 +1,142 @@
+<section id="home-title" class="bg-primary">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 mt-70 text-center">
+        <h3 class="text-muted">Nunca ha sido tan fácil<br><strong>cuidar de tu hogar.</strong></h3>
+        <p class="text-muted">Selecciona un servicio para comenzar</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="home-filters"> 
+  <div class="container p-35">
+    <div class="row">
+      <ul class="list-unstyled">
+        <li>
+          <a href="#">
+            <%= image_tag("wiping.png", :class => "img-circle" ) %>
+            <div class="overlay">
+              <span>Limpieza</span>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <%= image_tag("flowers.png", :class => "img-circle" ) %>
+            <div class="overlay">
+              <span>Jardinería</span>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <%= image_tag("dog_white.png", :class => "img-circle" ) %>
+            <div class="overlay">
+              <span>Mascotas</span>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <%= image_tag("car_b.png", :class => "img-circle" ) %>
+            <div class="overlay">
+              <span>Automotriz</span>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="row">
+      <ul class="list-unstyled">
+        <li>
+          <a href="#">
+            <%= image_tag("pipe.png", :class => "img-circle" ) %>
+            <div class="overlay">
+              <span>Gasfitería</span>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <%= image_tag("screwdriver.png", :class => "img-circle" ) %>
+            <div class="overlay">
+              <span>Instalaciones</span>
+            </div>
+          </a>
+        </li>
+        <li>
+          <%= link_to(category_path(1)) do %>
+            <%= image_tag("power.png", :class => "img-circle" ) %>
+            <div class="overlay">
+              <span>Electricidad</span>
+            </div>
+          <% end %>  
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+<section id="home-pasos" class="text-center bg-warning">
+    <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h4 class="text-center pt-21 text-muted">1. Elige</h4>
+            <div class="demo">
+              <div class="hexa text-center" id="hexagon"></div>
+              <div class="hex-over"><i class="fa-check-square-o small"></i></div>
+            </div> 
+            <p class="p-63 text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit Numquam similique, tempore suscipit officiis consequatur, magni deserunt quia porro.</p>
+          </div>
+          <div class="col-md-4">
+            <h4 class="text-center pt-21 text-muted">2. Contrata</h4>
+            <div class="demo">
+              <div class="hexa text-center" id="hexagon"></div>
+              <div class="hex-over"><%= image_tag("handshake.png") %></div>
+            </div> 
+            <p class="p-63 text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit Numquam similique, tempore suscipit officiis consequatur, magni deserunt quia porro.</p>
+          </div>
+          <div class="col-md-4">
+            <h4 class="text-center pt-21 text-muted">3. Evalúa</h4>
+            <div class="demo">
+              <div class="hexa text-center" id="hexagon"></div>
+              <div class="hex-over"><%= image_tag("call.png") %></div>
+            </div> 
+            <p class="p-63 text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit Numquam similique, tempore suscipit officiis consequatur, magni deserunt quia porro.</p>
+          </div>
+        </div> <!-- row -->
+      </div> <!-- container -->
+</section>
+<section id="meet-server" class="bg-danger text-center">
+    <div class="container">
+        <div class="row">
+          <div class="col-md-1"></div>
+          <div class="col-md-4 m-0">
+            <%= image_tag("server.png", :class => "img-responsive mb-0 pb-0") %>
+          </div>
+          <div class="col-md-1"></div>
+          <div class="col-md-6 p-21 m-21">
+            <div class="row mt-35 p-21 server-des">
+                <h5 class="text-primary thin">Server de la semana: Ross</h5>
+                <p class="text-primary">Ham hock sausage strip steak tenderloin meatball. Kevin landjaeger shankle corned beef brisket pastrami. Porchetta rump tongue, cow shankle landjaeger flank ground round pastrami meatball filet mignon strip steak capicola short loin. <br> Short ribs ground round brisket strip steak bresaola corned beef fatback pastrami pancetta rump ham hock beef ribs pork loin t-bone drumstick.</p>
+                <div class="row">
+                    <button class="btn btn-primary">Contactar a Ross</button>
+                </div>
+            </div>  
+          </div>
+        </div>
+        </div> <!-- row -->
+      </div> <!-- container -->
+</section>
+<section id="listo">
+  <div class="container">
+    <div class="col-md-3"></div>
+    <div class="col-md-6 m-7">
+      <h4 class="text-secondary text-center">¿Listo para conseguir ayuda con las tareas de tu hogar?</h4>
+      <div class="row text-center">
+        <button class="btn btn-secondary">Ver proveedores disponibles</button>
+      </div>  
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+</section>

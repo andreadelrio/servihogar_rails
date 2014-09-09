@@ -1,29 +1,35 @@
-<div class="main-nav">
-  <div class="container">
-    <nav class="bg-primary navbar">
+<div class="main-nav bg-primary" id="top">
+  <div class="container bg-primary">
+    <nav class="navbar">
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#busqueda">
-          <span class="fa-bars"></span>
-          <small>MENÚ</small>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mob-menu">
+          <span class="fa-bars text-muted"></span>
+          <small class="text-muted">MENÚ</small>
         </button>
-        <div class=" p-7 bg-danger mb--7 mt--7">
-          <%= link_to '<i class="fa-power-off"></i>'.html_safe, root_url, class: "p-0 m-0 h2 text-muted" %>
+        <div class=" p-7 bg-primary mt-0">
+          <%= link_to "Servihogar", root_url, class: "medium m-0 h4 text-muted" %>
         </div>
       </div>
-      <div class="collapse navbar-collapse" id="busqueda">
+      <div class="collapse navbar-collapse" id="mob-menu">
         <ul class="nav navbar-right hidden-sm">
           <% if current_provider %>
-            <li class="dropdown mt-7 hidden-sm hidden-xs hidden-md">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Hola, <%= current_provider.name %> <i class="fa-caret-down"></i></a>
+            <li class="dropdown mt-7 hidden-sm hidden-xs">
+              <a href="#" class="dropdown-toggle text-muted" data-toggle="dropdown">Hola, <%= current_provider.name %> <i class="fa-caret-down"></i></a>
               <ul class="dropdown-menu">
                 <li><%= link_to '<i class="fa-edit"></i> Actualizar mi perfil'.html_safe, edit_provider_path(current_provider) %></li>
                 <li class="divider"></li>
-                <li><%= link_to '<i class="fa-power-off"></i> Salir'.html_safe, salir_path, :method => :delete, class: "text-danger"%></li>
-              </ul> <!-- dropdown-menu -->
+                <li><%= link_to '<i class="fa-power-off"></i> Salir'.html_safe, salir_path, :method => :delete, class: "text-danger" %></li>
+              </ul>
+            </li>
+            <li class="hidden-lg hidden-md">
+              <ul class="list-group m-0 pt-7">
+                <li class="list-group-item"><%= link_to '<i class="fa-edit"></i> Actualizar mi perfil'.html_safe, 'root_path' %></li>
+                <li class="list-group-item"><%= link_to '<i class="fa-power-off"></i> Salir'.html_safe, salir_path, :method => :delete, class: "text-danger" %></li>
+              </ul>
             </li>
             <% end %>
           </li>
-        </ul>  <!-- navbar-right -->
+        </ul>
         </div>
       </div>
     </nav>

@@ -1,165 +1,48 @@
-<section id="home-title" class="bg-primary">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12 mt-49 text-center">
-        <h3 class="text-muted">Nunca ha sido tan fácil<br><strong>cuidar de tu hogar.</strong></h3>
-        <p class="text-muted">Selecciona un servicio para comenzar</p>
-      </div>
-    </div>
+<div class="container">
+  <div class="row pt-70">
+    <%= search_form_for @search do |f| %>
+      <%= f.label :locations_id_eq, "Location" %>
+      <%= f.collection_select :locations_id_eq, Location.order(:name), :id, :name, include_blank: "Todos" %>
+      <%= f.label :category_id_eq, "Categoría" %>
+      <%= f.collection_select :category_id_eq, Category.order(:name), :id, :name, include_blank: "Todos" %>
+     
+      <%= f.submit "Filtrar proveedores" %>
+    <% end %>
   </div>
-</section>
-<section id="home-filters"> 
-  <div class="container p-35">
-    <div class="row">
-      <ul class="list-unstyled">
-        <li>
-          <a href="#">
-            <%= image_tag("wiping.png", :class => "img-circle" ) %>
-            <div class="overlay">
-              <span>Limpieza</span>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <%= image_tag("flowers.png", :class => "img-circle" ) %>
-            <div class="overlay">
-              <span>Jardinería</span>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <%= image_tag("dog_white.png", :class => "img-circle" ) %>
-            <div class="overlay">
-              <span>Mascotas</span>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <%= image_tag("car_b.png", :class => "img-circle" ) %>
-            <div class="overlay">
-              <span>Automotriz</span>
-            </div>
-          </a>
-        </li>
-      </ul>
-    </div>
-    <div class="row">
-      <ul class="list-unstyled">
-        <li>
-          <a href="#">
-            <%= image_tag("pipe.png", :class => "img-circle" ) %>
-            <div class="overlay">
-              <span>Gasfitería</span>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <%= image_tag("screwdriver.png", :class => "img-circle" ) %>
-            <div class="overlay">
-              <span>Instalaciones</span>
-            </div>
-          </a>
-        </li>
-        <li>
-          <%= link_to(category_path(1)) do %>
-            <%= image_tag("power.png", :class => "img-circle" ) %>
-            <div class="overlay">
-              <span>Electricidad</span>
-            </div>
-          <% end %>  
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</section>
-<section id="home-pasos" class="clearfix full-width-grid text-center bg-warning">
-    <div class="col-md-4 p-0">
-        <h4 class="text-center pt-21 text-muted">1. Elige</h4>
-        <div class="row">
-          <div class="col-md-1"></div>
-          <div class="col-md-2">
-            <h1></h1>
-            <div class="demo">
-            <div class="hexa text-center" id="hexagon"></div>
-            <div class="hex-over pt-21"><i class="fa-check-square-o h3"></i></div>
-            </div>
-          </div>
-          <div class="col-md-1"></div>
-         </div>
-        <p class="p-63 text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit Numquam similique, tempore suscipit officiis consequatur, magni deserunt quia porro.</p>
-    </div>
-    <div class="col-md-4 p-0">
-        <h4 class="text-center pt-21 text-muted">2. Contrata</h4>
-        <div class="row">
-          <div class="col-md-1"></div>
-          <div class="col-md-2">
-            <h1></h1>
-            <div class="demo">
-            <div class="hexa text-center" id="hexagon"></div>
-            <div class="hex-over pt-28"><%= image_tag("handshake.png") %></div>
-            </div>
-          </div>
-          <div class="col-md-1"></div>
-       </div>
-        <p class="p-63 text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit Numquam similique, tempore suscipit officiis consequatur, magni deserunt quia porro.</p>
-    </div>
-    <div class="col-md-4 p-0">
-        <h4 class="text-center pt-21 text-muted">3. Evalúa</h4>
-        <div class="row">
-          <div class="col-md-1"></div>
-          <div class="col-md-2">
-            <h1></h1>
-            <div class="demo">
-            <div class="hexa text-center" id="hexagon"></div>
-            <div class="hex-over pt-21"><%= image_tag("call.png") %></div>
-            </div>
-          </div>
-          <div class="col-md-1"></div>
-       </div>
-        <p class="p-63 text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit Numquam similique, tempore suscipit officiis consequatur, magni deserunt quia porro.</p>
-    </div> 
 
-  </section>
-  <section id="home-profiles">
-    <div class="container pb-35">
-      <div class="content-wrapper">
-        <div class="row">
-          <div class="col-md-4 text-center">
-            <div class="profile text-center">
-              <%= image_tag("girl.jpg", :class => "img-circle img-responsive" ) %> 
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat.</p>
-              <small>— Rachel, Travelled 01 August 2014</small>
-            </div> 
-          </div>
-          <div class="col-md-4 text-center">
-            <div class="profile text-center"> 
-              <%= image_tag("profile.png", :class => "img-circle img-responsive" ) %> 
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat.</p>
-              <small>— Rachel, Travelled 01 August 2014</small>
-            </div>     
-          </div>
-          <div class="col-md-4 text-center">
-            <div class="profile text-center"> 
-              <%= image_tag("Aviary.png", :class => "img-circle img-responsive" ) %> 
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat.</p>
-              <small>— Rachel, Travelled 01 August 2014</small>
-            </div>    
-          </div>
-        </div>
-      </div> 
-    </div>   
-  </section>
+  <h5>Listing providers</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Last name 1</th>
+      <th>Last name 2</th>
+      <th>Dni</th>
+      <th>Email</th>
+      <th>Category</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @providers.each do |provider| %>
+      <tr>
+        <td><%= provider.name %></td>
+        <td><%= provider.last_name_1 %></td>
+        <td><%= provider.last_name_2 %></td>
+        <td><%= provider.dni %></td>
+        <td><%= provider.email %></td>
+        <td><%= provider.category %></td>
+        <td><%= link_to 'Show', provider %></td>
+        <td><%= link_to 'Edit', edit_provider_path(provider) %></td>
+        <td><%= link_to 'Destroy', provider, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+</div>

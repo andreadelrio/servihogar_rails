@@ -86,6 +86,17 @@ cite    { font-style: normal; }
   }
   color: $brand-primary!important;
 }
+
+.text-secondary {
+  a {
+    color: $brand-secondary!important;
+    &:hover {
+      color: darken($brand-secondary, 21%);
+    }
+  }
+  color: $brand-secondary!important;
+}
+
 .text-warning {
   a {
     color: $state-warning-text!important;

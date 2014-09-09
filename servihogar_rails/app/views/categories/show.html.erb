@@ -1,5 +1,15 @@
 <%= render "layouts/flash_alerts" %>
-<div class="container mt-56 mh-630">
+<div class="container mh-630">
+  <div class="row mt-56">
+    <%= search_form_for @search do |f| %>
+      <%= f.label :locations_id_eq, "Location" %>
+      <%= f.collection_select :locations_id_eq, Location.order(:name), :id, :name, include_blank: "Todos" %>
+      <%= f.label :category_id_eq, "Categoría" %>
+      <%= f.collection_select :category_id_eq, Category.order(:name), :id, :name, include_blank: "Todos", :selected => params[:id] %>
+     
+      <%= f.submit "Filtrar proveedores" %>
+    <% end %>
+  </div>
   <p class="help-block mt-49 mb-7 text-gray-darker text-left">Mostrando proveedores de la categoría <span class="medium"><%= @category.name %>:</span></p>
   <div class="row">
     <div class="col-md-8 mt-21">

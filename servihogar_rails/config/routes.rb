@@ -1,5 +1,5 @@
 ServihogarRails::Application.routes.draw do
-  root 'providers#index'
+  root 'providers#home'
 
   resources :providers
 
