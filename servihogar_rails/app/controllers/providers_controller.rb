@@ -18,6 +18,11 @@ class ProvidersController < ApplicationController
   # GET /providers/1
   # GET /providers/1.json
   def show
+    respond_to do |format|
+        format.html # show.html.erb
+        format.js # show.js.erb
+        format.json { render json: @provider }
+    end
   end
 
   # GET /providers/new

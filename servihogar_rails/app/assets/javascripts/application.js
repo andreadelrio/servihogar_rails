@@ -1,9 +1,6 @@
 //= require jquery
 //= require jquery_ujs
-//= require angular.min
 //= require fullcalendar.min
-//= require jquery.datepair.min
-//= require jquery.timepicker.min
 //= require bootstrap/collapse
 //= require bootstrap/bootstrap-datepicker
 //= require bootstrap/dropdown
@@ -11,6 +8,7 @@
 //= require bootstrap/transition
 //= require bootstrap/tooltip
 //= require bootstrap/z_popover
+//= require bootstrap/modal
 //= require bootstrap/tab
 //= require jquery.sticky
 //= require easing
@@ -19,7 +17,13 @@
 //= require_self
 //= require_tree .
 
+$(document).ready(function() {
 
+	$(function () {
+	    $('.example').popover();
+	});
+
+});
 
 
 

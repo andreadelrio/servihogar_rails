@@ -117,8 +117,8 @@
           <div class="col-md-1"></div>
           <div class="col-md-6 p-21 m-21">
             <div class="row mt-35 p-21 server-des">
-                <h5 class="text-primary thin">Server de la semana: Ross</h5>
-                <p class="text-primary">Ham hock sausage strip steak tenderloin meatball. Kevin landjaeger shankle corned beef brisket pastrami. Porchetta rump tongue, cow shankle landjaeger flank ground round pastrami meatball filet mignon strip steak capicola short loin. <br> Short ribs ground round brisket strip steak bresaola corned beef fatback pastrami pancetta rump ham hock beef ribs pork loin t-bone drumstick.</p>
+                <h5 class="text-primary thin"><i class="fa-star"> </i>Server de la semana: Ross</h5>
+                <p class="text-primary">Ham hock sausage strip steak tenderloin meatball. Kevin landjaeger shankle corned beef brisket pastrami. </p><p class="text-primary"> Short ribs ground round brisket strip steak bresaola corned beef fatback pastrami pancetta rump ham hock beef ribs pork loin.</p>
                 <div class="row">
                     <button class="btn btn-primary">Contactar a Ross</button>
                 </div>
@@ -131,10 +131,10 @@
 <section id="listo">
   <div class="container">
     <div class="col-md-3"></div>
-    <div class="col-md-6 m-7">
+    <div class="col-md-6 m-14">
       <h4 class="text-secondary text-center">¿Listo para conseguir ayuda con las tareas de tu hogar?</h4>
       <div class="row text-center">
-        <button class="btn btn-secondary">Ver proveedores disponibles</button>
+        <%= link_to 'Ver proveedores disponibles', providers_path, :class => "btn btn-secondary" %>
       </div>  
     </div>
     <div class="col-md-3"></div>

@@ -27,22 +27,23 @@
 @import "b3/_buttons.scss";
 
 // Components
+@import "b3/_alerts.scss";
+@import "b3/_badges.scss";
 @import "b3/_button-groups.scss";
 @import "b3/_component-animations.scss";
 @import "b3/_dropdowns.scss";
+@import "b3/_icons.scss";
 @import "b3/_input-groups.scss";
+@import "b3/_list-group.scss";
+@import "b3/_modals.scss";
 @import "b3/_navbar.scss";
 @import "b3/_navs.scss";
 @import "b3/_panels.scss";
-@import "b3/_icons.scss";
-@import "b3/_badges.scss";
-@import "b3/_wells.scss";
-@import "b3/_list-group.scss";
 @import "b3/_tables.scss";
-@import "b3/_alerts.scss";
 @import "b3/_tooltip.scss";
 @import "b3/_popovers.scss";
 @import "b3/_pagination.scss";
+@import "b3/_wells.scss";
 
 // Templates
 @import "navs/_header_rails.scss";
@@ -65,3 +66,4 @@
 //Custom
 @import "custom/_home";
 @import "custom/_header_rails";
+@import "custom/_provider_modal";

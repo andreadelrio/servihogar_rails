@@ -35,8 +35,8 @@
         <td><%= provider.last_name_2 %></td>
         <td><%= provider.dni %></td>
         <td><%= provider.email %></td>
-        <td><%= provider.category %></td>
-        <td><%= link_to 'Show', provider %></td>
+        <td><%= provider.category.name %></td>
+        <td><%= link_to 'View Details', provider, remote: true %></td>
         <td><%= link_to 'Edit', edit_provider_path(provider) %></td>
         <td><%= link_to 'Destroy', provider, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
@@ -46,3 +46,5 @@
 
 <br>
 </div>
+
+<%= render "layouts/modal" %>
