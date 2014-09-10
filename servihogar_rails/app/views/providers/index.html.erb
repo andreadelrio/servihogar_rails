@@ -8,43 +8,28 @@
      
       <%= f.submit "Filtrar proveedores" %>
     <% end %>
+  </div>  <!-- row -->
+
+<% @providers.each do |provider| %>
+
+
+  <div class="row list-profiles">   
+    <div class="col-md-12 p-0">
+      <div class="col-md-3 pt-14 pb-14">
+        <%= image_tag("profile.png", :class => "img-circle" ) %>
+      </div>
+      <div class="col-md-4 pt-21 pb-21">
+        <h5><%= provider.name %> <%= provider.last_name_1 %> <%= provider.last_name_2 %></h5>
+        <span><p><i class="fa fa-check"></i> <%= provider.category.name %><p></span>
+        <span><p><i class="fa fa-map-marker"></i> <%= provider.locations.map(&:name).join(",") %></p></span>
+        <span><p>Calificación promedio: <i class="fa fa-star"></i> <%= provider.avg_rating %></p></span>
+      </div>
+      <div class="col-md-5 text-center mt-56 p-0">
+        <%= link_to "Contrátame S/.#{provider.price}/hr", provider, remote: true, :class => "btn btn-primary" %>
+      </div> 
+    </div>
   </div>
-
-  <h5>Listing providers</h5>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Last name 1</th>
-      <th>Last name 2</th>
-      <th>Dni</th>
-      <th>Email</th>
-      <th>Category</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @providers.each do |provider| %>
-      <tr>
-        <td><%= provider.name %></td>
-        <td><%= provider.last_name_1 %></td>
-        <td><%= provider.last_name_2 %></td>
-        <td><%= provider.dni %></td>
-        <td><%= provider.email %></td>
-        <td><%= provider.category.name %></td>
-        <td><%= link_to 'View Details', provider, remote: true %></td>
-        <td><%= link_to 'Edit', edit_provider_path(provider) %></td>
-        <td><%= link_to 'Destroy', provider, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
     <% end %>
-  </tbody>
-</table>
-
-<br>
 </div>
 
 <%= render "layouts/modal" %>

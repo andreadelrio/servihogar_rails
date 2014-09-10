@@ -6112,3 +6112,18 @@ transform: rotate(-27deg);*/
       border-radius: 5px; }
     #mini-profiles .container-fluid .profile-view .coment:hover {
       background-color: #71cfee; }
+
+.container .list-profiles {
+  margin-right: 140px;
+  margin-left: 140px;
+  border-left: 11px solid #2AD1E1; }
+  .container .list-profiles .col-md-12 {
+    box-shadow: 1px 3px 25px -5px #BFBCAA;
+    background-color: white; }
+    .container .list-profiles .col-md-12 img {
+      width: 150px;
+      border: 3px solid skyblue; }
+    .container .list-profiles .col-md-12 .col-md-5 {
+      margin-top: 89px; }
+      .container .list-profiles .col-md-12 .col-md-5 button {
+        padding: 2px 50px; }
