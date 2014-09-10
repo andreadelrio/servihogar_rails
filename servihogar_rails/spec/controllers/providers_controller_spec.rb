@@ -25,7 +25,7 @@ describe ProvidersController do
       let(:valid_attributes) { attributes_for(:provider) }
 
       let(:create_action) do
-        post :create,  locale: "es", provider: valid_attributes
+        post :create, provider: valid_attributes
       end
 
       it "creates a new provider with valid attributes" do
@@ -46,7 +46,7 @@ describe ProvidersController do
 
     context 'with invalid params' do
       let(:bad_params) do
-        post :create, locale: "es", provider: {first_name: ""}
+        post :create, provider: {first_name: ""}
       end
 
       it "does not create provider" do
