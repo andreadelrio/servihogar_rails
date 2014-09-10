@@ -11,6 +11,12 @@ When /^I am on my provider fotos page$/ do
   visit_and_assert(my_pic_provider_path(@provider))
 end
 
+When /^I go to the provider sign up page$/ do
+  category = create(:category)
+  location = create(:location)
+  visit(new_provider_path)
+end
+
 And /^I am on the homepage$/ do
   visit_and_assert(root_path)
 end
@@ -37,6 +43,7 @@ And /^I am on the provider new page$/ do
   visit_and_assert(new_provider_path)
 end
 
+
 Then /^I should be on my provider dashboard page/ do
   current_path_is("/proveedores/#{@provider.url}/paneldecontrol")
 end
@@ -62,7 +69,7 @@ Then /^I should be on the provider signup page$/ do
 end
 
 Then /^I should be on the provider login page$/ do
-  current_path_is("/providers_sessions")
+  current_path_is("/providers_sessions/new")
 end
 
 Then /^I should be on my provider set locations page$/ do

@@ -12,7 +12,7 @@ Feature: provider sign up
   Scenario: submit correct information
     When I submit correct provider information
     Then I should have successfully created a provider account
-    And I should see a welcome message and be on the homepage
+  #  And I should see a welcome message and be on the homepage
 
   #Sad Path
   

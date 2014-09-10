@@ -11,6 +11,10 @@ Feature: provider authorizations
     When I visit another provider's edit page
     Then I should be on the homepage
 
+  Scenario: provider can't go to the sign up page
+    When I go to the provider sign up page
+    Then I should be redirected to the homepage
+
   # Scenario: provider can go to his 'fotos' page
   #   When I am on my provider fotos page
   #   Then I should be on my provider fotos page

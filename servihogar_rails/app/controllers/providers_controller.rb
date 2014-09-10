@@ -40,7 +40,7 @@ class ProvidersController < ApplicationController
     @provider = Provider.new(provider_params)
       if @provider.save
         session[:provider_id] = @provider.id
-        flash[:success] = "Hola #{@provider.name}, bienvenido a Servihogar."
+        flash.now[:success] = "Hola #{@provider.name}, bienvenido a Servihogar."
         redirect_to root_path
       else
         render "new"
@@ -83,8 +83,8 @@ class ProvidersController < ApplicationController
     end
 
     def get_ranges
-      @letters1 = ('A'..'J').to_a
-      @letters2 = ('K'..'R').to_a
+      @letters1 = ('A'..'I').to_a
+      @letters2 = ('J'..'R').to_a
       @letters3 = ('S'..'Z').to_a
     end
 end

@@ -20,8 +20,15 @@
 $(document).ready(function() {
 
 	$(function () {
-	    $('.example').popover();
+		$('.example').popover();
 	});
+
+	$(function(){
+    $('#investor_all_new_zealand').change(function() {
+        $('input[type="checkbox"]').click();
+    });
+	});
+
 
 });
 
