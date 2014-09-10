@@ -48,15 +48,13 @@
                 <%= f.text_field :price, class: "form-control" %>
               </div>
             </div>
+
+            <%= check_box_tag('check_all', 'check_all', false, :onClick => "checkAll(this);") %>
  
             <label>¿En qué distritos puedes trabajar?</label> <br>
 
             <div class="row pt-14 pb-21">
             <div class="col-md-4">
-
-              <input name="investor[all_new_zealand]" type="hidden" value="0">
-              <input class="boolean optional" id="investor_all_new_zealand" name="investor[all_new_zealand]" type="checkbox" value="1">
-              <label class="boolean optional" for="investor_all_new_zealand">All of New Zealand</label> <br>
  
               <%= hidden_field_tag "provider[location_ids][]", nil %>
               <% Location.where("substr(name, 1, 1) IN (?)", @letters1).each do |location| %>
