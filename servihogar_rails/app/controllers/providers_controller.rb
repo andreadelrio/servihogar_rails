@@ -1,7 +1,7 @@
 class ProvidersController < ApplicationController
   before_action :set_provider, only: [:show, :edit, :update, :destroy]
   before_action :require_current_provider, only: [:edit]
-  before_action :get_ranges, only: [:edit, :new]
+  before_action :get_ranges, only: [:edit, :new, :create]
   before_action :require_unlogged_provider, only: [:new]
 
 
@@ -44,6 +44,7 @@ class ProvidersController < ApplicationController
         redirect_to root_path
       else
         render "new"
+  #      redirect_to new_provider_path
       end
   end
 

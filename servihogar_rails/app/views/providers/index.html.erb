@@ -21,7 +21,7 @@
       <div class="col-md-4 pt-21 pb-21">
         <h5><%= provider.name %> <%= provider.last_name_1 %> <%= provider.last_name_2 %></h5>
         <span><p><i class="fa fa-check"></i> <%= provider.category.name %><p></span>
-        <span><p><i class="fa fa-map-marker"></i> <%= provider.locations.map(&:name).join(",") %></p></span>
+        <span><p><i class="fa fa-map-marker"></i> <%= provider.prov_locations %></p></span>
         <span><p>Calificación promedio: <i class="fa fa-star"></i> <%= provider.avg_rating %></p></span>
       </div>
       <div class="col-md-5 text-center mt-56 p-0">

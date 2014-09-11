@@ -56,9 +56,13 @@ Then /^I should be on my provider fotos page$/ do
   current_path_is("/proveedores/#{@provider.url}/fotos")
 end
 
-Then /^I should be on my provider time administration page$/ do
-  current_path_is("/proveedores/#{@provider.url}/administrartiempo")
+Then /^I should be redirected to the provider signup page$/ do
+  current_path_is("/providers")
 end
+
+Then /^I should be redirected to the provider login page$/ do
+  current_path_is("/providers_sessions")
+end  
 
 Then /^I should be on the provider new password page$/ do
   current_path_is(new_providers_password_reset_path)

@@ -18,10 +18,10 @@ Feature: provider sign up
   
   Scenario: passwords don't match
     When I submit mismatched passwords
-    Then I should be on the provider signup page
+    Then I should be redirected to the provider signup page
     And I should see a passwords don't match error for provider
 
   Scenario: didn't pick any locations
     When I don't check any locations
-    Then I should be on the provider signup page
+    Then I should be redirected to the provider signup page
     And I should see a missing locations error message

@@ -16,5 +16,5 @@ Feature: provider login
 #Happy Path
   Scenario: login unsuccessful
     When I login with invalid provider credentials
-    Then I should be on the provider login page
+    Then I should be redirected to the provider login page
     And I should see a please wrong password email combination

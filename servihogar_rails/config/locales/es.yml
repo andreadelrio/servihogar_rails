@@ -250,6 +250,9 @@ es:
             url: "URL"
             title: "Sufijo"
             locations: "Ubicaciones"
+            price: "Precio por hora"
+            phone: "Teléfono"
+            dni: "DNI"
         location:
             street_address: "Dirección"   
             district: "Distrito"
