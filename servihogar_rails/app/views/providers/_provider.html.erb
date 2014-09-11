@@ -1,31 +1,22 @@
 <section id="mini-profiles">          
-  <div class="container-fluid bg-white mt-35">
+  <div class="container-fluid mh-210 bg-white m-0">
     <div class="row">
       <div class="profile-view">
-        <div class="col-md-3">
-          <div class="profile-pic">
+        <div class="col-md-4 text-center">
+          <div class="profile-pic text-center">
             <%= image_tag("Aviary.png", :class => "img-circle img-responsive") %>
-            <h5 class="text-center">Lorena N.</h5>
-            <button class="job btn btn-sm btn-primary">CONTRATAR</button>
+            <i class="fa fa-check"></i><strong> <%= provider.category.name %></strong>
+            <h3 class="m-0 p-0"> 4<i class="fa fa-star"></i> <%= provider.avg_rating %> </h3><p>Rating Positivo</p></span>
            </div>
         </div >
-        <div class="col-md-6">
+        <div class="col-md-8 mt-35">
           <div class="info">
-            <h4>Hola, soy <%= provider.name %>.</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
-            <p>Soy una Server desde el <strong>2014</strong>.</p>
-            <p>He hecho <strong>57 servicios</strong>.</p>
-            <p>Soy<strong> muy eficaz</strong>.</p>
-            <p>Tengo un <strong>vehiculo</strong> si necesitas uno.</p>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="coment">
-            <h5><strong>96%</strong> Rating Positivo</h5> 
-            <p>"Lorena es una grandiosa persona, estoy muy feliz de haber contratado sus servicios, es muy eficiente. Me encantaria volver a contactarla."</p>
-            <button class="btn"><strong>+</strong> Comentarios</button>
+            <h5 class="text-center">Hola, soy <%= provider.name %>.</h5>
+            <p class="mb-21">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+           <ul class="list-unstyled">
+            <li><span><i class="fa-map-marker mb-14"></i>&nbsp;Distritos donde puede trabajar:&nbsp;</span><%= provider.locations.map(&:name).join(", ") %></li>
+            <li><span><i class="fa-phone"></i>&nbsp;Teléfono:&nbsp;</span> <%= provider.phone %></li>
+           </ul> 
           </div>
         </div>
       </div> 

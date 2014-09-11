@@ -1,21 +1,69 @@
-.container {
-	.list-profiles {
-		margin-right: 140px;
-		margin-left: 140px;
-		border-left: 11px solid #2AD1E1;
-		.col-md-12 {
-			box-shadow: 1px 3px 25px -5px #BFBCAA;
-			background-color: white;
-			img {
-				width: 150px;
-				border: 3px solid skyblue;
+.container-fluid {
+	.row {
+		form {
+			background: #efce5a;
+			margin-left: 14px;
+			margin-top: 52px;
+			padding: 10px;
+			color: white;
+			.form-location-nav {
+				border-radius: 11px;
+				padding: 7px;
+				margin: 2px;
+				color: gray;
 			}
-			.col-md-5 {
-				margin-top: 89px;
-				button {
-				padding: 2px 50px;
-				}
+			.form-servers-nav {
+				border-radius: 11px;
+				padding: 7px;
+				margin-top: 2px;
+				color: gray;
+			}
+			.form-search {
+				border-radius: 4px;
+				padding: 7px 21px;
+				background: white;
+				color: gray;
+			}
+			.form-search:hover {
+				background: #2ad1e1;
+				color: white;
 			}
 		}
 	}
+}
+.container {
+	.row {
+		.col-md-12 {
+			.row{
+				.col-md-8 {
+					border-left: 11px solid #2AD1E1;
+					box-shadow: 1px 3px 25px -5px #BFBCAA;
+					i {
+						color: #2ad1e1;
+					}
+					.col-md-3 {
+						img {
+						width: 150px;
+						border: 3px solid #2ad1e1;
+						}
+					}
+					.col-md-4 {
+						padding: 63px 0;
+						.btn {
+							padding: 3px 45px;
+							margin-left: 14px;
+						}
+					}
+				}
+			}	
+		}	
+	}
+}
+
+.fa-star {
+	margin-left: -0.2em;
+}
+
+.fa-check {
+	margin-left: -0.2em;
 }

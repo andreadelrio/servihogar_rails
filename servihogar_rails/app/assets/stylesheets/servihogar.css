@@ -4008,16 +4008,6 @@ table th[class*="col-"] {
   .home-feed .isotope-item {
     min-height: 160px; }
 
-.icon-sam {
-  background: url(/img/icon_sam.png) no-repeat center center;
-  width: 210px;
-  height: 220px;
-  position: absolute;
-  left: -30px; }
-
-.resultados {
-  min-height: 768px; }
-
 .proveedor-profile {
   background: white;
   border-right: 1px solid #eeeeee;
@@ -5871,9 +5861,6 @@ td.visible-print {
   padding: 2px;
   background: #71cfee; }
 
-span {
-  color: #71cfee; }
-
 #home-profiles .profile button {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -5907,9 +5894,6 @@ span {
 #home-profiles .container .content-wrapper .profile {
   padding: 100px 14px 14px 14px;
   border-radius: 7px; }
-
-span {
-  color: #71cfee; }
 
 #home-profiles .profile button {
   -webkit-appearance: none;
@@ -6071,59 +6055,59 @@ transform: rotate(-27deg);*/
   padding-top: 10px; }
 
 #mini-profiles .container-fluid {
-  background: white;
-  margin-top: 70px;
-  border-radius: 7px;
-  min-height: 370px; }
-  #mini-profiles .container-fluid .profile-view button {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    border-radius: 5px;
-    border: 2px solid;
-    margin: 0 auto;
-    width: 210px;
-    height: 50px;
-    font-size: 16px;
-    text-align: center; }
-  #mini-profiles .container-fluid .profile-view .profile-pic img {
-    width: 200px;
-    padding: 3px;
-    background: #71cfee;
-    margin: 20px 8px 8px 8px; }
-  #mini-profiles .container-fluid .profile-view .profile-pic h3 {
-    padding-left: 52px;
-    margin-top: 0px; }
-  #mini-profiles .container-fluid .profile-view .profile-pic a h4 {
-    padding-left: 60px; }
-  #mini-profiles .container-fluid .profile-view .info h2 {
-    margin-top: 30px; }
-  #mini-profiles .container-fluid .profile-view .coment {
-    margin-top: 30px; }
-    #mini-profiles .container-fluid .profile-view .coment button {
-      border: 2px solid;
-      margin: 0 auto;
-      width: 200px;
-      height: 40px;
-      font-size: 16px;
-      text-align: center;
-      border-color: #71cfee;
-      background: white;
-      border-radius: 5px; }
-    #mini-profiles .container-fluid .profile-view .coment:hover {
-      background-color: #71cfee; }
+  padding: 3px; }
+  #mini-profiles .container-fluid .profile-view .col-md-4 i {
+    color: #2ad1e1; }
+  #mini-profiles .container-fluid .profile-view .col-md-4 .profile-pic img {
+    width: 150px; }
+  #mini-profiles .container-fluid .profile-view .col-md-4 .profile-pic h3 {
+    color: #2ad1e1; }
+  #mini-profiles .container-fluid .profile-view .col-md-8 .info p {
+    color: gray; }
+  #mini-profiles .container-fluid .profile-view .col-md-8 .info i {
+    color: #2ad1e1; }
 
-.container .list-profiles {
-  margin-right: 140px;
-  margin-left: 140px;
-  border-left: 11px solid #2AD1E1; }
-  .container .list-profiles .col-md-12 {
-    box-shadow: 1px 3px 25px -5px #BFBCAA;
-    background-color: white; }
-    .container .list-profiles .col-md-12 img {
-      width: 150px;
-      border: 3px solid skyblue; }
-    .container .list-profiles .col-md-12 .col-md-5 {
-      margin-top: 89px; }
-      .container .list-profiles .col-md-12 .col-md-5 button {
-        padding: 2px 50px; }
+.container-fluid .row form {
+  background: #efce5a;
+  margin-left: 14px;
+  margin-top: 52px;
+  padding: 10px;
+  color: white; }
+  .container-fluid .row form .form-location-nav {
+    border-radius: 11px;
+    padding: 7px;
+    margin: 2px;
+    color: gray; }
+  .container-fluid .row form .form-servers-nav {
+    border-radius: 11px;
+    padding: 7px;
+    margin-top: 2px;
+    color: gray; }
+  .container-fluid .row form .form-search {
+    border-radius: 4px;
+    padding: 7px 21px;
+    background: white;
+    color: gray; }
+  .container-fluid .row form .form-search:hover {
+    background: #2ad1e1;
+    color: white; }
+
+.container .row .col-md-12 .row .col-md-8 {
+  border-left: 11px solid #2AD1E1;
+  box-shadow: 1px 3px 25px -5px #BFBCAA; }
+  .container .row .col-md-12 .row .col-md-8 i {
+    color: #2ad1e1; }
+  .container .row .col-md-12 .row .col-md-8 .col-md-3 img {
+    width: 150px;
+    border: 3px solid #2ad1e1; }
+  .container .row .col-md-12 .row .col-md-8 .col-md-4 {
+    padding: 63px 0; }
+    .container .row .col-md-12 .row .col-md-8 .col-md-4 .btn {
+      padding: 3px 45px;
+      margin-left: 14px; }
+
+.fa-star {
+  margin-left: -0.2em; }
+
+.fa-check {
+  margin-left: -0.2em; }

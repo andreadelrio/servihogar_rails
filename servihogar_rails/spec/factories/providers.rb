@@ -9,7 +9,7 @@ FactoryGirl.define do
     price                    30
     password                 "foobarbaz"
     password_confirmation    "foobarbaz"
-    category_id           "1"
+    category
     locations          {|t| [t.association(:location)] }
   end  
 end

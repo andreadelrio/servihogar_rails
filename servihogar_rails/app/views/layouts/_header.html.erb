@@ -2,17 +2,19 @@
   <div class="container bg-primary">
     <nav class="navbar">
       <div class="navbar-header">
+        <% if current_provider %>
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mob-menu">
           <span class="fa-bars text-muted"></span>
           <small class="text-muted">MENÚ</small>
         </button>
+        <% end %>
         <div class=" p-7 bg-primary mt-0">
           <%= link_to "Servihogar", root_url, class: "medium m-0 h4 text-muted" %>
         </div>
       </div>
       <div class="collapse navbar-collapse" id="mob-menu">
         <ul class="nav navbar-right hidden-sm">
-          <% if current_provider %>
+            <% if current_provider %>
             <li class="dropdown mt-7 hidden-sm hidden-xs">
               <a href="#" class="dropdown-toggle text-muted" data-toggle="dropdown">Hola, <%= current_provider.name %> <i class="fa-caret-down"></i></a>
               <ul class="dropdown-menu">
