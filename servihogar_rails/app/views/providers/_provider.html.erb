@@ -4,7 +4,11 @@
       <div class="profile-view">
         <div class="col-md-4 text-center">
           <div class="profile-pic text-center">
-            <%= image_tag(provider.picture_url, :class => "img-circle img-responsive mb-14") %>
+            <% if provider.picture_url.present? %>
+              <%= image_tag(provider.picture_url, :class => "img-circle img-responsive mb-14" ) %>
+            <% else %>  
+              <%= image_tag('server_carnet.png', :class => "img-circle img-responsive mb-14" ) %>
+            <% end %>
             <i class="fa fa-check"></i><strong> <%= provider.category.name %></strong>
             <p class="m-0 p-0" ><i class="fa fa-star"></i> <%= provider.avg_rating %> </p>
             Calificación Promedio
