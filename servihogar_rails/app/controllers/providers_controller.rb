@@ -53,7 +53,8 @@ class ProvidersController < ApplicationController
   def update
     respond_to do |format|
       if @provider.update(provider_params)
-        format.html { redirect_to @provider, notice: 'Tu perfil se ha actualizado con éxito' }
+      #  format.html { redirect_to root_path, notice: 'Tu perfil se ha actualizado con éxito' }
+        format.html { redirect_to root_path }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
