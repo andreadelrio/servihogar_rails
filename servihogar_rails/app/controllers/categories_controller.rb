@@ -19,7 +19,7 @@ class CategoriesController < ApplicationController
       @providers = @category.providers
     else
       @providers = @search.result
-    end 
+    end  
   end
 
   private

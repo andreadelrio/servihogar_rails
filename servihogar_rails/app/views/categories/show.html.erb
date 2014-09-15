@@ -1,37 +1,44 @@
-<%= render "layouts/flash_alerts" %>
-<div class="container mh-630">
-  <div class="row mt-56">
+<div class="container-fluid">
+  <div class="row text-center">
     <%= search_form_for @search do |f| %>
-      <%= f.label :locations_id_eq, "Location" %>
-      <%= f.collection_select :locations_id_eq, Location.order(:name), :id, :name, include_blank: "Todos" %>
-      <%= f.label :category_id_eq, "Categoría" %>
-      <%= f.collection_select :category_id_eq, Category.order(:name), :id, :name, include_blank: "Todos", :selected => params[:id] %>
+      <%= f.label :locations_id_eq, "Distrito:" %>
+      <%= f.collection_select :locations_id_eq, Location.order(:name), :id, :name, {include_blank: "Todos"}, {class:"borderless form-location-nav"} %> 
+      <%= f.label :category_id_eq, "Servicio:" %>
+      <%= f.collection_select :category_id_eq, Category.order(:name), :id, :name, {include_blank: "Todos", :selected => params[:id]}, {class:"borderless form-servers-nav"} %>
      
-      <%= f.submit "Filtrar proveedores" %>
+      <%= f.submit "Buscar", class:"ml-14 borderless form-search" %>
     <% end %>
-  </div>
-  <p class="help-block mt-49 mb-7 text-gray-darker text-left">Mostrando proveedores de la categoría <span class="medium"><%= @category.name %>:</span></p>
-  <div class="row">
-    <div class="col-md-8 mt-21">
-      <ul class="list-group search-results text-left">
-        <% @providers.each do |provider| %>
-          <li href="" class="list-group-item row borderless">
+  </div>  <!-- row --> 
+</div>
+  <% @providers.each do |provider| %>
+<div class="container pt-21 pb-14">
+  <div class="row mt-14 mb-14">
+    <div class="col-md-12">
+      <div class="col-md-2"></div>   
+      <div class="row">
+        <div class="col-md-8  p-0 list-profiles">
+          <div class="col-md-3 text-center p-14">
+            <%= image_tag("profile.png", :class => "img-circle" ) %>
+          </div>
+          <div class="col-md-6 pt-14">
+            <h5 class="mb-14 text-center"><%= provider.name %> <%= provider.last_name_1 %> <%= provider.last_name_2 %></h5>
+            <ul class="list-unstyled">
+              <li><span><i class="fa-check"></i>&nbsp;Categoría:&nbsp;</span><%= provider.category.name %></li>
+              <li><span><i class="fa-map-marker"></i>&nbsp;&nbsp;Distritos:&nbsp;</span><%= provider.prov_locations %></li>
+              <li><span><i class="fa-star"></i>&nbsp;Calificación promedio:&nbsp;</span> <%= provider.avg_rating %>/5</li>
+            </ul>
 
-              <div class="col-md-2 pl-0">
-                <p></p>
-              </div>
-              <div class="col-md-10 pl-0">
-                <p class="medium mb-0 underline"><%= link_to "#{provider.name} #{provider.last_name_1}", provider_path(provider) %></p>
-                <p class="medium mb-0"><i class="fa-map-marker"> </i>Disponible para:</p>
-                <ul class="list-unstyled">
-                  <li><%= provider.locations.map(&:name).join(",") %></li>
-                  <li class="mt-14"><%= link_to '<i class="fa-angle-double-right"></i> Ver información de contacto'.html_safe, provider_path(provider), class: "text-danger" %></li>
-                </ul>
-              </div>
-
-          </li>
-        <% end %>
-      </ul>
+          </div>
+          <div class="col-md-3 text-center">
+            <%= link_to "Contrátame <br> S/. #{provider.price}/hr".html_safe, provider, remote: true, :class => "mt-56 btn btn-primary" %>
+          </div>
+          </div>       
+        </div>
+      </div>
+      <div class="col-md-1"></div>
     </div>
   </div>
+    <% end %>
 </div>
+
+<%= render "layouts/modal" %>

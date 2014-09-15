@@ -2,8 +2,8 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12 mt-70 text-center">
-        <h3 class="text-muted">Nunca ha sido tan fácil<br><strong>cuidar de tu hogar.</strong></h3>
-        <p class="text-muted">Selecciona un servicio para comenzar</p>
+        <h3 class="text-muted">Soluciones para<strong> tu casa</strong></h3>
+        <h5 class="text-muted pb-14">Encuentra proveedores previamente evaluados y verificados.</h5>
       </div>
     </div>
   </div>
@@ -65,7 +65,7 @@
           </a>
         </li>
         <li>
-          <%= link_to(category_path(1)) do %>
+          <%= link_to(category_path(Category.find_by(name: "Electricista"))) do %>
             <%= image_tag("power.png", :class => "img-circle" ) %>
             <div class="overlay">
               <span>Electricidad</span>
@@ -86,15 +86,15 @@
               <div class="hexa text-center" id="hexagon"></div>
               <div class="hex-over"><i class="fa-check-square-o small"></i></div>
             </div> 
-            <p class="p-63 text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit Numquam similique, tempore suscipit officiis consequatur, magni deserunt quia porro.</p>
+            <h5 class="p-21 text-muted">Selecciona el servicio que necesitas y elige entre la lista de proveedores calificados.</h5>
           </div>
           <div class="col-md-4">
             <h4 class="text-center pt-21 text-muted">2. Contrata</h4>
             <div class="demo">
               <div class="hexa text-center" id="hexagon"></div>
               <div class="hex-over"><%= image_tag("handshake.png") %></div>
-            </div> 
-            <p class="p-63 text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit Numquam similique, tempore suscipit officiis consequatur, magni deserunt quia porro.</p>
+            </div>
+            <h5 class="p-21 text-muted">Contrata al proveedor que más se ajusta a tus necesidades.</h5> 
           </div>
           <div class="col-md-4">
             <h4 class="text-center pt-21 text-muted">3. Evalúa</h4>
@@ -102,7 +102,7 @@
               <div class="hexa text-center" id="hexagon"></div>
               <div class="hex-over"><%= image_tag("call.png") %></div>
             </div> 
-            <p class="p-63 text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit Numquam similique, tempore suscipit officiis consequatur, magni deserunt quia porro.</p>
+            <h5 class="p-21 text-muted">Asígnale un puntaje al proveedor de acuerdo a la calidad del servicio brindado.</h5>
           </div>
         </div> <!-- row -->
       </div> <!-- container -->

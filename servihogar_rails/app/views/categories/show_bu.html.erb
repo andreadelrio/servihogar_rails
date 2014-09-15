@@ -1,0 +1,37 @@
+<%= render "layouts/flash_alerts" %>
+<div class="container mh-630">
+  <div class="row mt-56">
+    <%= search_form_for @search do |f| %>
+      <%= f.label :locations_id_eq, "Location" %>
+      <%= f.collection_select :locations_id_eq, Location.order(:name), :id, :name, include_blank: "Todos" %>
+      <%= f.label :category_id_eq, "Categoría" %>
+      <%= f.collection_select :category_id_eq, Category.order(:name), :id, :name, include_blank: "Todos", :selected => params[:id] %>
+     
+      <%= f.submit "Filtrar proveedores" %>
+    <% end %>
+  </div>
+  <p class="help-block mt-49 mb-7 text-gray-darker text-left">Mostrando proveedores de la categoría <span class="medium"><%= @category.name %>:</span></p>
+  <div class="row">
+    <div class="col-md-8 mt-21">
+      <ul class="list-group search-results text-left">
+        <% @providers.each do |provider| %>
+          <li href="" class="list-group-item row borderless">
+
+              <div class="col-md-2 pl-0">
+                <p></p>
+              </div>
+              <div class="col-md-10 pl-0">
+                <p class="medium mb-0 underline"><%= link_to "#{provider.name} #{provider.last_name_1}", provider_path(provider) %></p>
+                <p class="medium mb-0"><i class="fa-map-marker"> </i>Disponible para:</p>
+                <ul class="list-unstyled">
+                  <li><%= provider.locations.map(&:name).join(",") %></li>
+                  <li class="mt-14"><%= link_to '<i class="fa-angle-double-right"></i> Ver información de contacto'.html_safe, provider_path(provider), class: "text-danger" %></li>
+                </ul>
+              </div>
+
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
