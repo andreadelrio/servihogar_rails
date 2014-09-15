@@ -43,8 +43,8 @@ class ProvidersController < ApplicationController
         flash.now[:success] = "Hola #{@provider.name}, bienvenido a Servihogar."
         redirect_to root_path
       else
-        render "new"
-  #      redirect_to new_provider_path
+       render "new"
+       #redirect_to new_provider_path
       end
   end
 

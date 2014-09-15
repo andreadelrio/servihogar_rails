@@ -1,5 +1,5 @@
 FactoryGirl.define do
   factory :location do
-  	name  "San Miguel"
+  	sequence(:name)     { |n| "Distrito#{n}" } 
   end
 end

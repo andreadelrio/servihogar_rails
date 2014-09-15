@@ -17,6 +17,9 @@ class Provider < ActiveRecord::Base
   validates_format_of :dni,
     with: /[0-9]+\z/i,
     message: %Q[solo puede incluir números (0-9).]
+  validates_format_of :phone,
+    with: /\A[0-9\-]+\z/,
+    message: %Q[solo puede incluir números (0-9) y guiones "-".]  
 
   def prov_locations
     if self.locations.count > 2

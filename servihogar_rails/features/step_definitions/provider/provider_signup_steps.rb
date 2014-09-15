@@ -1,4 +1,4 @@
-When /^(?:|I )submit correct provider information$/ do
+When /^I submit correct provider information$/ do
   category = Category.first.name
   location = Location.first
   fill_in('provider[email]', with: @provider.email)
@@ -50,6 +50,23 @@ When /^I don't check any locations$/ do
   click_on("submit")
 end
 
+When /^I submit a phone with letters$/ do
+  category = Category.first.name
+  location = Location.first
+  fill_in('provider[email]', with: @provider.email)
+  fill_in('provider[name]', with: @provider.name)
+  fill_in('provider[dni]', with: @provider.dni)
+  fill_in('provider[last_name_1]', with: @provider.last_name_1)
+  fill_in('provider[last_name_2]', with: @provider.last_name_2)
+  fill_in('provider[phone]', with: "aaavbbb")
+  fill_in('provider[price]', with: @provider.price)
+  select(category, from: 'provider[category_id]')
+  find("#location_#{location.id}").set(true)
+  fill_in('provider[password]', with: @provider.password)
+  fill_in('provider[password_confirmation]', with: @provider.password_confirmation)
+  click_on("submit")
+end
+
 And /^I should see a passwords don't match error for provider$/ do
   page.should have_content("Confirmación de contraseña no coincide con la contraseña")
 end
@@ -83,6 +100,11 @@ end
 
 Then /^I should see a missing locations error message$/ do
   expect(page).to have_content("Ubicaciones no puede estar en blanco.")
+#  current_path_is(root_path)
+end
+
+Then /^I should see a wrong phone format message$/ do
+  expect(page).to have_content("Teléfono solo puede incluir números (0-9) y guiones")
 #  current_path_is(root_path)
 end
 

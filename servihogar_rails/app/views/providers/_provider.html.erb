@@ -11,13 +11,11 @@
             <% end %>
             <i class="fa fa-check"></i><strong> <%= provider.category.name %></strong>
             <p class="m-0 p-0" ><i class="fa fa-star"></i> <%= provider.avg_rating %> </p>
-            Calificación Promedio
           </div>
         </div >
         <div class="col-md-8 mt-7">
           <div class="info">
             <h5 class="text-center">Hola, soy <%= provider.name %>.</h5>
-            <p class="mb-21">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
            <ul class="list-unstyled">
             <li><span><i class="fa-map-marker mb-14"></i>&nbsp;Distritos donde puede trabajar:&nbsp;</span><%= provider.locations.map(&:name).join(", ") %></li>
             <li><span><i class="fa-phone"></i>&nbsp;Teléfono:&nbsp;</span> <%= provider.phone %></li>

@@ -1,6 +1,5 @@
 When /^I update my provider category$/ do
   @category = Category.last
-  save_and_open_page
   select(@category.name, from: 'provider[category_id]')
   click_on("submit")
 end
