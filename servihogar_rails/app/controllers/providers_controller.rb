@@ -1,7 +1,7 @@
 class ProvidersController < ApplicationController
   before_action :set_provider, only: [:show, :edit, :update, :destroy]
   before_action :require_current_provider, only: [:edit]
-  before_action :get_ranges, only: [:edit, :new, :create]
+  before_action :get_ranges, except: [:show]
   before_action :require_unlogged_provider, only: [:new]
 
 
@@ -85,8 +85,10 @@ class ProvidersController < ApplicationController
     end
 
     def get_ranges
-      @letters1 = ('A'..'I').to_a
-      @letters2 = ('J'..'R').to_a
-      @letters3 = ('S'..'Z').to_a
+      size = (Location.all.count/3).ceil
+      sets = Location.all.in_groups(3, false)
+      @locations_set_1 = sets[0]
+      @locations_set_2 = sets[1]
+      @locations_set_3 = sets[2]
     end
 end

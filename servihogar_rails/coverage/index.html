@@ -14,27 +14,27 @@
       <img src="./assets/0.8.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2014-09-15T14:54:23-05:00">2014-09-15T14:54:23-05:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2014-09-16T17:44:31-05:00">2014-09-16T17:44:31-05:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">75.3%</span></span>
+    (<span class="covered_percent"><span class="red">74.42%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.89
+         0.93
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>26</b> files in total.
-    <b>166</b> relevant lines. 
-    <span class="green"><b>125</b> lines covered</span> and
-    <span class="red"><b>41</b> lines missed </span>
+    <b>172</b> relevant lines. 
+    <span class="green"><b>128</b> lines covered</span> and
+    <span class="red"><b>44</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -72,18 +72,18 @@
       
       <tr>
         <td class="strong"><a href="#59a0f3cf8851ba1c4873ad9005c28d74b738a029" class="src_link" title="app/controllers/providers_controller.rb">app/controllers/providers_controller.rb</a></td>
-        <td class="red strong">62.22 %</td>
-        <td>92</td>
-        <td>45</td>
-        <td>28</td>
+        <td class="red strong">63.83 %</td>
+        <td>94</td>
+        <td>47</td>
+        <td>30</td>
         <td>17</td>
-        <td>0.8</td>
+        <td>1.0</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#4d0a14319d046cd652a587978057a0e6464751a6" class="src_link" title="app/helpers/application_helper.rb">app/helpers/application_helper.rb</a></td>
         <td class="red strong">21.43 %</td>
-        <td>25</td>
+        <td>28</td>
         <td>14</td>
         <td>3</td>
         <td>11</td>
@@ -93,7 +93,7 @@
       <tr>
         <td class="strong"><a href="#34a38f86b9657fc23a3a023f0cc21e360bb2b4a8" class="src_link" title="app/helpers/providers_helper.rb">app/helpers/providers_helper.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>2</td>
+        <td>3</td>
         <td>1</td>
         <td>1</td>
         <td>0</td>
@@ -132,12 +132,12 @@
       
       <tr>
         <td class="strong"><a href="#bee1dac9d25ab53a6100048c2d8003e41495d87b" class="src_link" title="app/models/provider.rb">app/models/provider.rb</a></td>
-        <td class="yellow strong">81.25 %</td>
-        <td>32</td>
-        <td>16</td>
-        <td>13</td>
-        <td>3</td>
-        <td>0.8</td>
+        <td class="red strong">70.0 %</td>
+        <td>40</td>
+        <td>20</td>
+        <td>14</td>
+        <td>6</td>
+        <td>0.7</td>
       </tr>
       
       <tr>
@@ -563,10 +563,10 @@
         <div class="source_table" id="59a0f3cf8851ba1c4873ad9005c28d74b738a029">
   <div class="header">
     <h3>app/controllers/providers_controller.rb</h3>
-    <h4><span class="red">62.22 %</span> covered</h4>
+    <h4><span class="red">63.83 %</span> covered</h4>
     <div>
-      <b>45</b> relevant lines. 
-      <span class="green"><b>28</b> lines covered</span> and
+      <b>47</b> relevant lines. 
+      <span class="green"><b>30</b> lines covered</span> and
       <span class="red"><b>17</b> lines missed.</span>
     </div>
   </div>
@@ -595,7 +595,7 @@
         <li class="covered" data-hits="1" data-linenumber="4">
           <span class="hits">1</span>
           
-          <code class="ruby">  before_action :get_ranges, only: [:edit, :new, :create]</code>
+          <code class="ruby">  before_action :get_ranges, except: [:show]</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="5">
@@ -1096,31 +1096,43 @@
           <code class="ruby">    def get_ranges</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="88">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="4" data-linenumber="88">
+          <span class="hits">4</span>
           
-          <code class="ruby">      @letters1 = (&#39;A&#39;..&#39;I&#39;).to_a</code>
+          <code class="ruby">      size = (Location.all.count/3).ceil</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="89">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="4" data-linenumber="89">
+          <span class="hits">4</span>
           
-          <code class="ruby">      @letters2 = (&#39;J&#39;..&#39;R&#39;).to_a</code>
+          <code class="ruby">      sets = Location.all.in_groups(3, false)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="90">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="4" data-linenumber="90">
+          <span class="hits">4</span>
           
-          <code class="ruby">      @letters3 = (&#39;S&#39;..&#39;Z&#39;).to_a</code>
+          <code class="ruby">      @locations_set_1 = sets[0]</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="91">
+        <li class="covered" data-hits="4" data-linenumber="91">
+          <span class="hits">4</span>
+          
+          <code class="ruby">      @locations_set_2 = sets[1]</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="92">
+          <span class="hits">4</span>
+          
+          <code class="ruby">      @locations_set_3 = sets[2]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="93">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="92">
+        <li class="never" data-hits="" data-linenumber="94">
           
           
           <code class="ruby">end</code>
@@ -1291,6 +1303,24 @@
         <li class="never" data-hits="" data-linenumber="25">
           
           
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="26">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="27">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="28">
+          
+          
           <code class="ruby">end</code>
         </li>
       
@@ -1319,6 +1349,12 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="3">
           
           
           <code class="ruby">end</code>
@@ -1493,11 +1529,11 @@
         <div class="source_table" id="bee1dac9d25ab53a6100048c2d8003e41495d87b">
   <div class="header">
     <h3>app/models/provider.rb</h3>
-    <h4><span class="yellow">81.25 %</span> covered</h4>
+    <h4><span class="red">70.0 %</span> covered</h4>
     <div>
-      <b>16</b> relevant lines. 
-      <span class="green"><b>13</b> lines covered</span> and
-      <span class="red"><b>3</b> lines missed.</span>
+      <b>20</b> relevant lines. 
+      <span class="green"><b>14</b> lines covered</span> and
+      <span class="red"><b>6</b> lines missed.</span>
     </div>
   </div>
   
@@ -1690,7 +1726,55 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="32">
+        <li class="covered" data-hits="1" data-linenumber="32">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def prov_locations_modal</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="33">
+          
+          
+          <code class="ruby">    if self.locations.count == Location.all.count </code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="34">
+          
+          
+          <code class="ruby">      return &quot;Todos los distritos de Lima Metropolitana.&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="35">
+          
+          
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="36">
+          
+          
+          <code class="ruby">      return self.locations.map(&amp;:name).join(&quot;, &quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="37">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="38">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="39">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="40">
           
           
           <code class="ruby">end</code>

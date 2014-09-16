@@ -233,10 +233,14 @@
         null,
         0,
         null,
+        null,
+        null,
+        null,
         null
       ],
       "/Users/andreadelrio/otheprojects/servihogar_rails/app/helpers/providers_helper.rb": [
         1,
+        null,
         null
       ],
       "/Users/andreadelrio/otheprojects/servihogar_rails/spec/support/session_test_helper.rb": [
@@ -339,9 +343,11 @@
         null,
         null,
         1,
-        2,
-        2,
-        2,
+        4,
+        4,
+        4,
+        4,
+        4,
         null,
         null
       ],
@@ -382,6 +388,19 @@
         null,
         null
       ],
+      "/Users/andreadelrio/otheprojects/servihogar_rails/app/models/location.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        0,
+        null,
+        null,
+        null
+      ],
       "/Users/andreadelrio/otheprojects/servihogar_rails/app/models/provider.rb": [
         1,
         1,
@@ -414,24 +433,19 @@
         null,
         null,
         null,
+        1,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null,
         null
       ],
       "/Users/andreadelrio/otheprojects/servihogar_rails/app/models/category.rb": [
         1,
         1,
-        null
-      ],
-      "/Users/andreadelrio/otheprojects/servihogar_rails/app/models/location.rb": [
-        1,
-        1,
-        1,
-        null,
-        1,
-        null,
-        1,
-        0,
-        null,
-        null,
         null
       ],
       "/Users/andreadelrio/otheprojects/servihogar_rails/app/models/localization.rb": [
@@ -441,7 +455,7 @@
         null
       ]
     },
-    "timestamp": 1410810863
+    "timestamp": 1410907471
   },
   "Cucumber Features": {
     "coverage": {

@@ -51,26 +51,26 @@
             <label>¿En qué distritos puedes trabajar?</label> <br>
 
             <div class="row pt-14 pb-21">
-            <div class="col-md-4 pr-0">
-              <div>
-              <%= check_box_tag('check_all', 'check_all', false, :onClick => "checkAll();") %> <p onclick="allLabel()" class="inline-block m-0 p-0 strong text-primary">Todos</p>
+              <div class="col-md-12">
+                <%= check_box_tag('check_all', 'check_all', false, :onClick => "checkAll();") %> <p onclick="allLabel()" class="inline-block m-0 p-0 strong text-primary">Todos</p>
               </div>
+            <div class="col-md-4 pr-0">
               <%= hidden_field_tag "provider[location_ids][]", nil %>
-              <% Location.where("substr(name, 1, 1) IN (?)", @letters1).each do |location| %>
+              <% @locations_set_1.each do |location| %>
                 <%= check_box_tag "provider[location_ids][]", location.id, @provider.location_ids.include?(location.id), id: dom_id(location), :onClick => "uncheckMain(this);", class: "location_cbx" %>
                 <%= label_tag dom_id(location), location.name, class: "small" %> <br>
               <% end %>
             </div>
             <div class="col-md-4 pr-0">
               <%= hidden_field_tag "provider[location_ids][]", nil %>
-              <% Location.where("substr(name, 1, 1) IN (?)", @letters2).each do |location| %>
+              <% @locations_set_2.each do |location| %>
                 <%= check_box_tag "provider[location_ids][]", location.id, @provider.location_ids.include?(location.id), id: dom_id(location), :onClick => "uncheckMain(this);", class: "location_cbx" %>
                 <%= label_tag dom_id(location), location.name, class: "small" %> <br>
               <% end %>
             </div>
             <div class="col-md-4 pr-0">
               <%= hidden_field_tag "provider[location_ids][]", nil %>
-              <% Location.where("substr(name, 1, 1) IN (?)", @letters3).each do |location| %>
+              <% @locations_set_3.each do |location| %>
                 <%= check_box_tag "provider[location_ids][]", location.id, @provider.location_ids.include?(location.id), id: dom_id(location), :onClick => "uncheckMain(this);", class: "location_cbx" %>
                 <%= label_tag dom_id(location), location.name, class: "small" %> <br>
               <% end %>
