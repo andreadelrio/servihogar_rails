@@ -122,30 +122,30 @@ footer {
 }
 
 #hexagon {
-  width: 66px;
-  height: 104px;
+  width: 80px;
+  height: 120px;
   background: #F39442;
   position: absolute;
 
   &:before {
     content: "";
-    left:-66px;
+    left:-80px;
     display:block;
     position: relative;
     border-right: 30px solid #F39442;
-    border-top: 52px solid transparent;
-    border-bottom: 52px solid transparent;
+    border-top: 60px solid transparent;
+    border-bottom: 60px solid transparent;
   }
 
   &:after {
     content: "";
-    right:-66px;
-    top:-104px;
+    right:-80px;
+    top:-120px;
     position: relative;
     display:block;
     border-left: 30px solid #F39442;
-    border-top: 52px solid transparent;
-    border-bottom: 52px solid transparent;
+    border-top: 60px solid transparent;
+    border-bottom: 60px solid transparent;
   }
 }
 
@@ -215,4 +215,10 @@ footer {
   background-color: $body-bg;
   border-radius: 20px;
   border: 5px solid $brand-primary;
+}
+
+.handshake {
+  margin-left: 12px;
+  margin-top: 10px;
+;
 }

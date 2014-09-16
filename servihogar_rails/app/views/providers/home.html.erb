@@ -84,7 +84,7 @@
             <h4 class="text-center pt-21 text-muted">1. Elige</h4>
             <div class="demo">
               <div class="hexa text-center" id="hexagon"></div>
-              <div class="hex-over"><i class="fa-check-square-o small"></i></div>
+              <div class="hex-over"><i class="pl-7 fa-check-square-o small"></i></div>
             </div> 
             <h5 class="p-21 text-muted">Selecciona el servicio que necesitas y elige entre la lista de proveedores calificados.</h5>
           </div>
@@ -92,7 +92,7 @@
             <h4 class="text-center pt-21 text-muted">2. Contrata</h4>
             <div class="demo">
               <div class="hexa text-center" id="hexagon"></div>
-              <div class="hex-over"><%= image_tag("handshake.png") %></div>
+              <div class="hex-over"><%= image_tag("handshake.png", :class => 'handshake') %></div>
             </div>
             <h5 class="p-21 text-muted">Contrata al proveedor que más se ajusta a tus necesidades.</h5> 
           </div>
@@ -100,7 +100,7 @@
             <h4 class="text-center pt-21 text-muted">3. Evalúa</h4>
             <div class="demo">
               <div class="hexa text-center" id="hexagon"></div>
-              <div class="hex-over"><%= image_tag("call.png") %></div>
+              <div class="hex-over"><%= image_tag("call.png", :class => 'handshake') %></div>
             </div> 
             <h5 class="p-21 text-muted">Asígnale un puntaje al proveedor de acuerdo a la calidad del servicio brindado.</h5>
           </div>
@@ -111,8 +111,8 @@
     <div class="container">
         <div class="row">
           <div class="col-md-1"></div>
-          <div class="col-md-4 m-0">
-            <%= image_tag("server.png", :class => "img-responsive mb-0 pb-0") %>
+          <div class="col-md-4">
+            <%= image_tag("server_rosa.png", :class => "img-responsive mt-49") %>
           </div>
           <div class="col-md-1"></div>
           <div class="col-md-6 p-21 m-21">
